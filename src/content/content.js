@@ -1,0 +1,166 @@
+// Content file with all text from Fresh Garden.pdf
+// Asset mappings for images and video
+
+// Hero slider images
+import heroImg1 from '../assets/images/IMG_8118.JPG';
+import heroImg2 from '../assets/images/IMG_8119.JPG';
+
+// About/Mission images
+import aboutImg from '../assets/images/IMG_8120.JPG';
+import missionImg from '../assets/images/IMG_8121.JPG';
+
+// Gallery images
+import gallery1 from '../assets/images/IMG_8122.JPG';
+import gallery2 from '../assets/images/IMG_8123.JPG';
+import gallery3 from '../assets/images/IMG_8124.JPG';
+import gallery4 from '../assets/images/IMG_8125.JPG';
+import gallery5 from '../assets/images/IMG_8126.JPG';
+import gallery6 from '../assets/images/IMG_8127.JPG';
+import gallery7 from '../assets/images/IMG_8128.JPG';
+import gallery8 from '../assets/images/IMG_8129.JPG';
+import gallery9 from '../assets/images/IMG_8130.JPG';
+import gallery10 from '../assets/images/IMG_8131.JPG';
+import gallery11 from '../assets/images/IMG_8132.JPG';
+import gallery12 from '../assets/images/IMG_8133.JPG';
+import gallery13 from '../assets/images/IMG_8134.JPG';
+import gallery14 from '../assets/images/IMG_8135.JPG';
+import gallery15 from '../assets/images/IMG_8140.JPG';
+import gallery16 from '../assets/images/IMG_8141.JPG';
+import gallery17 from '../assets/images/IMG_8142.JPG';
+import gallery18 from '../assets/images/IMG_8143.JPG';
+
+// Video
+// import harvestVideo from '../assets/video/IMG_8117.MOV'; // Temporarily disabled for demo
+
+// Page header backgrounds
+import aboutPageBg from '../assets/images/IMG_8120.JPG';
+import productsPageBg from '../assets/images/IMG_8121.JPG';
+
+export const content = {
+    // Company info
+    company: {
+        name: 'Fresh Garden',
+        tagline: 'Quba',
+        phone: '+994 50 123 45 67',
+        email: 'info@freshgarden.az',
+        address: 'Quba, Azərbaycan',
+        social: {
+            facebook: 'https://facebook.com/freshgarden',
+            instagram: 'https://instagram.com/freshgarden',
+            youtube: 'https://youtube.com/freshgarden'
+        }
+    },
+
+    // Navigation
+    navigation: [
+        { name: 'Ana səhifə', path: '/' },
+        { name: 'Haqqımızda', path: '/haqqimizda' },
+        { name: 'Məhsullarımız', path: '/mehsullarimiz' }
+    ],
+
+    // Hero section
+    hero: {
+        slides: [
+            {
+                image: heroImg1,
+                title: 'Fresh Garden Quba',
+                subtitle: 'Təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısı'
+            },
+            {
+                image: heroImg2,
+                title: 'Keyfiyyətli Meyvələr',
+                subtitle: 'Müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim edirik'
+            }
+        ]
+    },
+
+    // About section (for homepage)
+    about: {
+        title: 'Haqqımızda',
+        text: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
+
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.`,
+        image: aboutImg,
+        buttonText: 'Daha ətraflı'
+    },
+
+    // Mission section (for homepage)
+    mission: {
+        title: 'Missiyamız',
+        text: `Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
+
+Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq. Məhsullarımız həm daxili bazarda supermarketlərə və distribütorlara, həm də xarici ölkələrə ixrac olunur.
+
+Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərlərimizdir.`,
+        image: missionImg
+    },
+
+    // Full about page content
+    aboutPage: {
+        title: 'Haqqımızda',
+        headerImage: aboutPageBg,
+        content: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
+
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
+
+Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq. Məhsullarımız həm daxili bazarda supermarketlərə və distribütorlara, həm də xarici ölkələrə ixrac olunur.
+
+Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərlərimizdir. Müasir aqrotexniki yanaşma, təcrübəli mütəxəssislər və ekoloji məsuliyyət sayəsində Fresh Garden brendi qısa zamanda müştərilərin etibarını qazanmışdır.
+
+🌱 Fresh Garden – təbiətdən gələn təmizlik və təravət.`,
+        video: null // harvestVideo - temporarily disabled for demo
+    },
+
+    // Products - With High Quality Unsplash Images
+    products: {
+        title: 'Məhsullarımız',
+        headerImage: productsPageBg,
+        items: [
+            {
+                name: 'Alma',
+                image: 'https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=800',
+                description: 'Qırmızı, şirəli və vitaminli Quba alması. Dadı ilə fərqlənir.'
+            },
+            {
+                name: 'Nektarin',
+                image: 'https://images.pexels.com/photos/5945755/pexels-photo-5945755.jpeg?auto=compress&cs=tinysrgb&w=800',
+                description: 'Günəşin istiliyi ilə yetişmiş, şirəli və ətirli nektarinlər.'
+            },
+            {
+                name: 'Şaftalı',
+                image: 'https://images.pexels.com/photos/2894205/pexels-photo-2894205.jpeg?auto=compress&cs=tinysrgb&w=800',
+                description: 'Yumşaq, şirəli və ləzzətli şaftalılarımız süfrənizin bəzəyi olacaq.'
+            },
+            {
+                name: 'Gilas',
+                image: 'https://images.pexels.com/photos/175727/pexels-photo-175727.jpeg?auto=compress&cs=tinysrgb&w=800',
+                description: 'Tünd qırmızı, iri və dadlı gilas növlərimiz.'
+            }
+        ]
+    },
+
+    // Gallery
+    gallery: {
+        title: 'Qalereya',
+        images: [
+            gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
+            gallery7, gallery8, gallery9, gallery10, gallery11, gallery12,
+            gallery13, gallery14, gallery15, gallery16, gallery17, gallery18
+        ]
+    },
+
+    // Contact
+    contact: {
+        title: 'Əlaqə',
+        phone: '+994 50 123 45 67',
+        email: 'info@freshgarden.az',
+        address: 'Quba, Azərbaycan',
+        social: {
+            facebook: 'https://facebook.com/freshgarden',
+            instagram: 'https://instagram.com/freshgarden',
+            youtube: 'https://youtube.com/freshgarden'
+        }
+    }
+};
+
+export default content;
