@@ -1,16 +1,96 @@
-# React + Vite
+# Fresh Garden Quba
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fresh Garden Quba is a modern, responsive business card website for a local fruit producer based in Quba, Azerbaijan. The website showcases the company's high-quality apples, nectarines, peaches, and cherries, reflecting their commitment to nature, purity, and hard work.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Modern & Responsive Design**: Built with a mobile-first approach, ensuring a seamless experience across all devices.
+-   **Dynamic Animations**: Powered by **Framer Motion** for smooth page transitions and scroll reveals.
+-   **Interactive Sliders**: Hero section and gallery utilize **Swiper.js** for touch-friendly image browsing.
+-   **SEO Optimized**: Fully optimized with meta tags, Open Graph data, and structured data (JSON-LD) using **React Helmet Async**.
+-   **Routing**: Client-side routing with **React Router v7**.
+-   **Performance Focused**: Optimized asset loading and build process using **Vite**.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Framework**: [React](https://reactjs.org/) (v18)
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Styling**: [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) & [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Sliders**: [Swiper](https://swiperjs.com/)
+-   **SEO**: [React Helmet Async](https://github.com/staylor/react-helmet-async)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these steps to set up the project locally:
+
+### Prerequisites
+
+-   Node.js (version 18+ recommended)
+-   npm or pnpm
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/tamer-7rd/fresh-garden.git
+    cd fresh-garden-website
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
+
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    pnpm dev
+    ```
+
+    The app will natively run at `http://localhost:5173`.
+
+### Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/         # Images, icons, and static assets
+├── components/     # Reusable UI components (Header, Footer, SEO, etc.)
+├── content/        # Centralized content management (text, SEO data)
+├── pages/          # Main application pages (Home, About, Products, etc.)
+├── sections/       # Sectional components (Hero, Contact, Gallery, etc.)
+├── index.css       # Global styles and Tailwind imports
+└── main.jsx        # Application entry point
+```
+
+## 📞 Contact
+
+-   **Company**: Fresh Garden
+-   **Location**: Qusar rayonu, Caqar kəndi, Azərbaycan
+-   **Phone**: +994 55 660 10 50
+-   **Email**: freshgardenquba.mmc@gmail.com
+-   **Website**: [freshgardenquba.az](https://freshgardenquba.az)
+
+---
+
+© 2026 Fresh Garden Quba. All rights reserved.
