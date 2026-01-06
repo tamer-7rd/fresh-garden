@@ -49,12 +49,12 @@ const AboutPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="text-center mb-8"
+                            className="text-center mb-12"
+                            style={{ marginBottom: '3rem' }}
                         >
                             <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text)] mb-4">
                                 Məhsul yığımı
                             </h2>
-                            <div className="w-20 h-1 bg-[var(--color-primary)] mx-auto"></div>
                         </motion.div>
 
                         <motion.div
@@ -63,6 +63,7 @@ const AboutPage = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="rounded-2xl overflow-hidden shadow-xl"
+                            style={{ marginBottom: '3rem' }}
                         >
                             <video
                                 controls
@@ -74,6 +75,7 @@ const AboutPage = () => {
                                 Sizin brauzeriniz video formatını dəstəkləmir.
                             </video>
                         </motion.div>
+                        
                     </div>
                 </section>
             )}

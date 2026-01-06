@@ -30,7 +30,7 @@ import gallery17 from '../assets/images/IMG_8142.JPG';
 import gallery18 from '../assets/images/IMG_8143.JPG';
 
 // Video
-// import harvestVideo from '../assets/video/IMG_8117.MOV'; // Temporarily disabled for demo
+import harvestVideo from '../assets/video/IMG_8117.MOV';
 
 // Page header backgrounds
 import aboutPageBg from '../assets/images/IMG_8120.JPG';
@@ -108,7 +108,7 @@ Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmi
 Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərlərimizdir. Müasir aqrotexniki yanaşma, təcrübəli mütəxəssislər və ekoloji məsuliyyət sayəsində Fresh Garden brendi qısa zamanda müştərilərin etibarını qazanmışdır.
 
 🌱 Fresh Garden – təbiətdən gələn təmizlik və təravət.`,
-        video: null // harvestVideo - temporarily disabled for demo
+        video: harvestVideo
     },
 
     // Products - With High Quality Unsplash Images
