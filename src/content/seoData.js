@@ -5,7 +5,7 @@ export const seoData = {
     // Global site info
     site: {
         name: 'Fresh Garden Quba',
-        url: 'https://freshgarden.az',
+        url: 'https://freshgardenquba.az',
         locale: 'az_AZ',
         type: 'website',
         author: 'Fresh Garden',
@@ -41,41 +41,37 @@ export const seoData = {
         '@type': 'Organization',
         name: 'Fresh Garden',
         alternateName: 'Fresh Garden Quba',
-        url: 'https://freshgarden.az',
-        logo: 'https://freshgarden.az/logo.png',
+        url: 'https://freshgardenquba.az',
+        logo: 'https://freshgardenquba.az/logo.png',
         description: 'Təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısı',
         foundingDate: '2000',
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+994-50-123-45-67',
+            telephone: '+994-55-660-10-50',
             contactType: 'customer service',
             areaServed: 'AZ',
             availableLanguage: ['az', 'ru', 'en']
         },
         address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Quba',
+            addressLocality: 'Qusar rayonu, Caqar kəndi',
             addressCountry: 'AZ'
         },
-        sameAs: [
-            'https://facebook.com/freshgarden',
-            'https://instagram.com/freshgarden',
-            'https://youtube.com/freshgarden'
-        ]
+        sameAs: []
     },
 
     // Local business structured data
     localBusiness: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        '@id': 'https://freshgarden.az/#business',
+        '@id': 'https://freshgardenquba.az/#business',
         name: 'Fresh Garden',
-        image: 'https://freshgarden.az/og-image.jpg',
-        telephone: '+994-50-123-45-67',
-        email: 'info@freshgarden.az',
+        image: 'https://freshgardenquba.az/og-image.jpg',
+        telephone: '+994-55-660-10-50',
+        email: 'freshgardenquba.mmc@gmail.com',
         address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Quba',
+            addressLocality: 'Qusar rayonu, Caqar kəndi',
             addressCountry: 'AZ'
         },
         geo: {

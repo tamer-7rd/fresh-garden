@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://freshgarden.az/sitemap.xml
+Sitemap: https://freshgardenquba.az/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

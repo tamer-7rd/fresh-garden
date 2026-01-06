@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Homepage -->
     <url>
-        <loc>https://freshgarden.az/</loc>
+        <loc>https://freshgardenquba.az/</loc>
         <lastmod>2026-01-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,7 +10,7 @@
     
     <!-- About Page -->
     <url>
-        <loc>https://freshgarden.az/haqqimizda</loc>
+        <loc>https://freshgardenquba.az/haqqimizda</loc>
         <lastmod>2026-01-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -18,7 +18,7 @@
     
     <!-- Products Page -->
     <url>
-        <loc>https://freshgarden.az/mehsullarimiz</loc>
+        <loc>https://freshgardenquba.az/mehsullarimiz</loc>
         <lastmod>2026-01-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
