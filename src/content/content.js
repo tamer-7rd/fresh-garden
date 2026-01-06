@@ -47,9 +47,9 @@ export const content = {
     company: {
         name: 'Fresh Garden',
         tagline: 'Quba',
-        phone: '+994 50 123 45 67',
-        email: 'info@freshgarden.az',
-        address: 'Quba, Azərbaycan',
+        phone: '+994 55 660 10 50',
+        email: 'freshgardenquba.mmc@gmail.com',
+        address: 'Qusar rayonu, Caqar kəndi,  Azərbaycan',
 
     },
 
@@ -154,9 +154,9 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
     // Contact
     contact: {
         title: 'Əlaqə',
-        phone: '+994 50 123 45 67',
-        email: 'info@freshgarden.az',
-        address: 'Quba, Azərbaycan',
+        phone: '+994 55 660 10 50',
+        email: 'freshgardenquba.mmc@gmail.com',
+        address: 'Qusar rayonu, Caqar kəndi, Azərbaycan',
 
     }
 };

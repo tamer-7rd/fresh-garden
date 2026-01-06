@@ -3,7 +3,7 @@ import { content } from '../content/content';
 
 const Contact = () => {
     return (
-        <section className="bg-[var(--color-primary)]" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+        <section className="bg-[var(--color-primary)]" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
