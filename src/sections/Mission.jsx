@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
+import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
 
 const Mission = () => {
@@ -19,10 +20,12 @@ const Mission = () => {
                         className="order-2 lg:order-1 relative"
                     >
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                            <img
+                            <OptimizedImage
                                 src={content.mission.image}
                                 alt="Fresh Garden missiyası"
-                                className="w-full h-[400px] lg:h-[500px] object-cover"
+                                className=""
+                                style={{ height: '400px' }}
+                                objectFit="cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                             <div className="absolute bottom-8 left-8 right-8 text-white">

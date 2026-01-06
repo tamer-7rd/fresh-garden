@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
+import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
 
 const Products = () => {
@@ -30,6 +31,7 @@ const Products = () => {
                     title={content.products.title}
                     subtitle="Təzə və keyfiyyətli meyvələrimiz"
                     center={false}
+                    underline={false}
                 />
 
                 <motion.div
@@ -49,13 +51,13 @@ const Products = () => {
                             <Link to="/mehsullarimiz" className="block h-full">
                                 <div className="product-card h-full flex flex-col">
                                     <div className="relative overflow-hidden shrink-0">
-                                        <div className="aspect-[4/3] w-full">
-                                            <img
-                                                src={product.image}
-                                                alt={product.name}
-                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        </div>
+                                        <OptimizedImage
+                                            src={product.image}
+                                            alt={product.name}
+                                            aspectRatio="4/3"
+                                            className="group-hover:scale-110 transition-transform duration-700"
+                                            objectFit="cover"
+                                        />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                             <div className="absolute bottom-4 left-0 right-0 text-center text-white p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                                 <span className="inline-block px-4 py-1.5 border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">

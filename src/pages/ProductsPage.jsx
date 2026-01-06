@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { content } from '../content/content';
+import OptimizedImage from '../components/OptimizedImage';
 import SEO from '../components/SEO';
 
 const ProductsPage = () => {
@@ -66,13 +67,13 @@ const ProductsPage = () => {
                                 >
                                     <div className="product-card h-full flex flex-col">
                                         <div className="relative overflow-hidden shrink-0">
-                                            <div className="aspect-[4/3] w-full">
-                                                <img
-                                                    src={product.image}
-                                                    alt={product.name}
-                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                                />
-                                            </div>
+                                            <OptimizedImage
+                                                src={product.image}
+                                                alt={product.name}
+                                                aspectRatio="4/3"
+                                                className="group-hover:scale-110 transition-transform duration-700"
+                                                objectFit="cover"
+                                            />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
                                                 <span className="text-white font-semibold text-lg tracking-wide">Daha ətraflı</span>
                                             </div>

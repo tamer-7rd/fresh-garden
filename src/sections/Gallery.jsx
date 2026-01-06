@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { content } from '../content/content';
+import OptimizedImage from '../components/OptimizedImage';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -68,11 +69,12 @@ const Gallery = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group"
                             >
-                                <img
+                                <OptimizedImage
                                     src={image}
-                                    alt={`Gallery ${index + 1}`}
-                                    className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    alt={`Fresh Garden - Bağ görüntüsü ${index + 1}`}
+                                    className="transition-transform duration-500 group-hover:scale-110"
                                     style={{ height: '512px' }}
+                                    objectFit="cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="absolute bottom-4 left-4 text-white">

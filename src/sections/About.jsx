@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
+import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
 
 const About = () => {
@@ -43,10 +44,12 @@ const About = () => {
                         className="relative"
                     >
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                            <img
+                            <OptimizedImage
                                 src={content.about.image}
                                 alt="Fresh Garden bağı"
-                                className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="transition-transform duration-700 group-hover:scale-105"
+                                style={{ height: '400px' }}
+                                objectFit="cover"
                             />
                             {/* Decorative frame */}
                             <div className="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 pointer-events-none"></div>

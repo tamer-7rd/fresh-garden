@@ -44,7 +44,7 @@ const AboutPage = () => {
                 </section>
 
                 {/* Video Section - Only show if video exists */}
-                {content.aboutPage.video && (
+                {content.aboutPage.videoUrl && (
                     <section className="pt-[35px] md:pt-[50px] pb-[70px] md:pb-[100px] bg-alt">
                         <div className="container max-w-4xl">
                             <motion.div
@@ -68,15 +68,16 @@ const AboutPage = () => {
                                 className="rounded-2xl overflow-hidden shadow-xl"
                                 style={{ marginBottom: '3rem' }}
                             >
-                                <video
-                                    controls
-                                    className="w-full"
-                                    poster={content.aboutPage.headerImage}
-                                >
-                                    <source src={content.aboutPage.video} type="video/quicktime" />
-                                    <source src={content.aboutPage.video} type="video/mp4" />
-                                    Sizin brauzeriniz video formatını dəstəkləmir.
-                                </video>
+                                <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
+                                    <iframe
+                                        src={content.aboutPage.videoUrl}
+                                        title="Məhsul yığımı"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute top-0 left-0 w-full h-full"
+                                    ></iframe>
+                                </div>
                             </motion.div>
                         </div>
                     </section>

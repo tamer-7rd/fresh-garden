@@ -13,28 +13,34 @@ import missionImg from '../assets/images/IMG_8121.JPG';
 import gallery1 from '../assets/images/IMG_8122.JPG';
 import gallery2 from '../assets/images/IMG_8123.JPG';
 import gallery3 from '../assets/images/IMG_8124.JPG';
-import gallery4 from '../assets/images/IMG_8125.JPG';
-import gallery5 from '../assets/images/IMG_8126.JPG';
+import gallery4 from '../assets/images/IMG_8136.JPG'; // Replaced missing 8125
+import gallery5 from '../assets/images/IMG_8137.JPG'; // Replaced missing 8126
 import gallery6 from '../assets/images/IMG_8127.JPG';
 import gallery7 from '../assets/images/IMG_8128.JPG';
 import gallery8 from '../assets/images/IMG_8129.JPG';
-import gallery9 from '../assets/images/IMG_8130.JPG';
+import gallery9 from '../assets/images/IMG_8138.JPG'; // Replaced missing 8130
 import gallery10 from '../assets/images/IMG_8131.JPG';
 import gallery11 from '../assets/images/IMG_8132.JPG';
 import gallery12 from '../assets/images/IMG_8133.JPG';
-import gallery13 from '../assets/images/IMG_8134.JPG';
+import gallery13 from '../assets/images/IMG_8127.JPG'; // Replaced missing 8134 with duplicate
 import gallery14 from '../assets/images/IMG_8135.JPG';
 import gallery15 from '../assets/images/IMG_8140.JPG';
-import gallery16 from '../assets/images/IMG_8141.JPG';
+import gallery16 from '../assets/images/IMG_8128.JPG'; // Replaced missing 8141 with duplicate
 import gallery17 from '../assets/images/IMG_8142.JPG';
-import gallery18 from '../assets/images/IMG_8143.JPG';
+import gallery18 from '../assets/images/IMG_8129.JPG'; // Replaced missing 8143 with duplicate
 
-// Video
-import harvestVideo from '../assets/video/IMG_8117.MOV';
+// Video - YouTube
+// Video URL is stored directly in content object
 
 // Page header backgrounds
 import aboutPageBg from '../assets/images/IMG_8120.JPG';
 import productsPageBg from '../assets/images/IMG_8121.JPG';
+
+// Product images
+import appleImg from '../assets/images/apple.jpeg';
+import gilasImg from '../assets/images/gilas.jpg';
+import nectarineImg from '../assets/images/nectarine.jpg';
+import persikImg from '../assets/images/persik.jpg';
 
 export const content = {
     // Company info
@@ -108,7 +114,7 @@ Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmi
 Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərlərimizdir. Müasir aqrotexniki yanaşma, təcrübəli mütəxəssislər və ekoloji məsuliyyət sayəsində Fresh Garden brendi qısa zamanda müştərilərin etibarını qazanmışdır.
 
 🌱 Fresh Garden – təbiətdən gələn təmizlik və təravət.`,
-        video: harvestVideo
+        videoUrl: 'https://www.youtube.com/embed/QSox0GBvNKU'
     },
 
     // Products - With High Quality Unsplash Images
@@ -118,22 +124,22 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         items: [
             {
                 name: 'Alma',
-                image: 'https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: appleImg,
                 description: 'Qırmızı, şirəli və vitaminli Quba alması. Dadı ilə fərqlənir.'
             },
             {
                 name: 'Nektarin',
-                image: 'https://images.pexels.com/photos/5945755/pexels-photo-5945755.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: nectarineImg,
                 description: 'Günəşin istiliyi ilə yetişmiş, şirəli və ətirli nektarinlər.'
             },
             {
                 name: 'Şaftalı',
-                image: 'https://images.pexels.com/photos/2894205/pexels-photo-2894205.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: persikImg,
                 description: 'Yumşaq, şirəli və ləzzətli şaftalılarımız süfrənizin bəzəyi olacaq.'
             },
             {
                 name: 'Gilas',
-                image: 'https://images.pexels.com/photos/175727/pexels-photo-175727.jpeg?auto=compress&cs=tinysrgb&w=800',
+                image: gilasImg,
                 description: 'Tünd qırmızı, iri və dadlı gilas növlərimiz.'
             }
         ]
