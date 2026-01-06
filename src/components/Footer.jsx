@@ -113,8 +113,13 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-gray-800 text-center text-gray-500 text-sm" style={{ paddingTop: '20px' }}>
-                    © {new Date().getFullYear()} {content.company.name}. Bütün hüquqlar qorunur.
+                <div className="border-t border-gray-800 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-3" style={{ paddingTop: '20px' }}>
+                    <span className="text-center md:text-left">
+                        © {new Date().getFullYear()} {content.company.name}. Bütün hüquqlar qorunur.
+                    </span>
+                    <span className="text-gray-400 text-xs md:text-sm">
+                        Made by <span className="text-[var(--color-primary)] font-semibold">T&T Lab</span>
+                    </span>
                 </div>
             </div>
         </footer>

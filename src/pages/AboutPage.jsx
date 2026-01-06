@@ -16,7 +16,7 @@ const AboutPage = () => {
                         backgroundPosition: 'center'
                     }}
                 >
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}

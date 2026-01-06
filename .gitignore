@@ -31,3 +31,16 @@ dist-ssr
 *.webm
 *.avi
 src/assets/video/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env*.local
+
+# Sensitive files
+*.pem
+*.key
+*.crt
+*.p12
