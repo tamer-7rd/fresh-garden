@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { content } from '../content/content';
+import logoImage from '../assets/images/logo.png';
 
 const Footer = () => {
     return (
@@ -8,13 +9,16 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10" style={{ marginBottom: '30px' }}>
                     {/* Company Info */}
                     <div>
-                        <div className="flex items-center gap-2" style={{ marginBottom: '15px' }}>
-                            <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center">
-                                <span className="text-white font-bold text-lg">🌱</span>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-xl">{content.company.name}</h3>
-                                <span className="text-sm text-gray-400">{content.company.tagline}</span>
+                        <div className="flex items-center" style={{ marginBottom: '15px' }}>
+                            <Link to="/" className="header-logo-container" style={{ marginLeft: '-15px' }}>
+                                <img
+                                    src={logoImage}
+                                    alt={content.company.name}
+                                    style={{ height: '80px' }}
+                                />
+                            </Link>
+                            <div className="header-brand-title" style={{ fontSize: '24px', marginLeft: '1px' }}>
+                                Fresh Garden <br className="mobile-only-br" /> Quba
                             </div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">

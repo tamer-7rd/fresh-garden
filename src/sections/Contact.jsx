@@ -21,7 +21,7 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-12">
                     {/* Phone */}
                     <motion.a
                         href={`tel:${content.contact.phone}`}
