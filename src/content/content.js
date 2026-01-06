@@ -50,11 +50,7 @@ export const content = {
         phone: '+994 50 123 45 67',
         email: 'info@freshgarden.az',
         address: 'Quba, Azərbaycan',
-        social: {
-            facebook: 'https://facebook.com/freshgarden',
-            instagram: 'https://instagram.com/freshgarden',
-            youtube: 'https://youtube.com/freshgarden'
-        }
+
     },
 
     // Navigation
@@ -161,11 +157,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         phone: '+994 50 123 45 67',
         email: 'info@freshgarden.az',
         address: 'Quba, Azərbaycan',
-        social: {
-            facebook: 'https://facebook.com/freshgarden',
-            instagram: 'https://instagram.com/freshgarden',
-            youtube: 'https://youtube.com/freshgarden'
-        }
+
     }
 };
 
