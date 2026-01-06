@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Mission from '../sections/Mission';
@@ -7,15 +8,19 @@ import Contact from '../sections/Contact';
 
 const Home = () => {
     return (
-        <main>
-            <Hero />
-            <About />
-            <Mission />
-            <Products />
-            <Gallery />
-            <Contact />
-        </main>
+        <>
+            <SEO page="home" />
+            <main>
+                <Hero />
+                <About />
+                <Mission />
+                <Products />
+                <Gallery />
+                <Contact />
+            </main>
+        </>
     );
 };
 
 export default Home;
+

@@ -68,7 +68,7 @@ const Header = () => {
                         </div>
 
                         {/* Desktop Navigation */}
-                        <nav className="header-nav">
+                        <nav className="header-nav" aria-label="Əsas naviqasiya">
                             {content.navigation.map((item) => (
                                 <Link
                                     key={item.path}

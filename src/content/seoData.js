@@ -1,0 +1,96 @@
+// SEO data for all pages
+// This file contains meta information for SEO optimization
+
+export const seoData = {
+    // Global site info
+    site: {
+        name: 'Fresh Garden Quba',
+        url: 'https://freshgarden.az',
+        locale: 'az_AZ',
+        type: 'website',
+        author: 'Fresh Garden',
+        themeColor: '#22c55e',
+        defaultImage: '/og-image.jpg'
+    },
+
+    // Page-specific SEO
+    pages: {
+        home: {
+            title: 'Fresh Garden Quba | Təbii Meyvələr İstehsalçısı',
+            description: 'Fresh Garden - Qubada 2000-ci ildən fəaliyyət göstərən yerli meyvə istehsalçısı. Təbii alma, nektarin, şaftalı, gilas və digər mövsümi meyvələr. Keyfiyyət və təbiət.',
+            keywords: 'Fresh Garden, Quba meyvələr, təbii meyvələr, alma, nektarin, şaftalı, gilas, Azərbaycan meyvələri, yerli istehsal, sağlam qida',
+            canonical: '/'
+        },
+        about: {
+            title: 'Haqqımızda | Fresh Garden Quba',
+            description: 'Fresh Garden haqqında - 2000-ci ildən fəaliyyət göstərən yerli meyvə istehsalçısı. Missiyamız, dəyərlərimiz və keyfiyyət prinsiplərimiz.',
+            keywords: 'Fresh Garden haqqında, şirkət tarixi, missiya, Quba meyvə ferması, Azərbaycan kənd təsərrüfatı',
+            canonical: '/haqqimizda'
+        },
+        products: {
+            title: 'Məhsullarımız | Fresh Garden Quba',
+            description: 'Fresh Garden məhsulları - təbii üsullarla yetişdirilmiş alma, nektarin, şaftalı, gilas. 100% təbii, yüksək keyfiyyətli Quba meyvələri.',
+            keywords: 'alma, nektarin, şaftalı, gilas, təbii meyvə, Quba alması, mövsümi meyvələr, topdan satış',
+            canonical: '/mehsullarimiz'
+        }
+    },
+
+    // Structured data for organization
+    organization: {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Fresh Garden',
+        alternateName: 'Fresh Garden Quba',
+        url: 'https://freshgarden.az',
+        logo: 'https://freshgarden.az/logo.png',
+        description: 'Təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısı',
+        foundingDate: '2000',
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+994-50-123-45-67',
+            contactType: 'customer service',
+            areaServed: 'AZ',
+            availableLanguage: ['az', 'ru', 'en']
+        },
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Quba',
+            addressCountry: 'AZ'
+        },
+        sameAs: [
+            'https://facebook.com/freshgarden',
+            'https://instagram.com/freshgarden',
+            'https://youtube.com/freshgarden'
+        ]
+    },
+
+    // Local business structured data
+    localBusiness: {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://freshgarden.az/#business',
+        name: 'Fresh Garden',
+        image: 'https://freshgarden.az/og-image.jpg',
+        telephone: '+994-50-123-45-67',
+        email: 'info@freshgarden.az',
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Quba',
+            addressCountry: 'AZ'
+        },
+        geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 41.3611,
+            longitude: 48.5131
+        },
+        priceRange: '$$',
+        openingHoursSpecification: {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            opens: '09:00',
+            closes: '18:00'
+        }
+    }
+};
+
+export default seoData;
