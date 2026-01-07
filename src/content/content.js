@@ -3,7 +3,7 @@
 
 // Hero slider images
 import heroImg1 from '../assets/images/IMG_8118.JPG';
-import heroImg2 from '../assets/images/IMG_8119.JPG';
+import heroImg2 from '../assets/images/IMG_8129.JPG';
 
 // About/Mission images
 import aboutImg from '../assets/images/IMG_8120.JPG';
