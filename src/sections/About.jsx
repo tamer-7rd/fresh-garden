@@ -3,13 +3,18 @@ import SectionTitle from '../components/SectionTitle';
 import Button from '../components/Button';
 import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 
 const About = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section id="about" className="section-padding bg-alt">
             <div className="container">
                 <SectionTitle
-                    title={content.about.title}
+                    title={t.about.title}
                     center={false}
                     underline={false}
                 />
@@ -23,11 +28,11 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <div className="text-[var(--color-text-light)] text-lg leading-relaxed whitespace-pre-line font-medium">
-                            {content.about.text}
+                            {t.about.text}
                         </div>
                         <div style={{ marginTop: '20px' }}>
                             <Button to="/haqqimizda">
-                                {content.about.buttonText}
+                                {t.about.buttonText}
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -46,7 +51,7 @@ const About = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                             <OptimizedImage
                                 src={content.about.image}
-                                alt="Fresh Garden bağı"
+                                alt="Fresh Garden"
                                 className="transition-transform duration-700 group-hover:scale-105"
                                 style={{ height: '400px' }}
                                 objectFit="cover"

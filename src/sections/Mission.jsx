@@ -2,8 +2,13 @@ import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 
 const Mission = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section className="section-padding bg-white relative overflow-hidden">
             {/* Background Pattern */}
@@ -22,14 +27,14 @@ const Mission = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                             <OptimizedImage
                                 src={content.mission.image}
-                                alt="Fresh Garden missiyası"
+                                alt="Fresh Garden"
                                 className=""
                                 style={{ height: '400px' }}
                                 objectFit="cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                             <div className="absolute bottom-8 left-8 right-8 text-white">
-                                <p className="text-xl font-bold">🌱 Təbiətdən gələn saflıq</p>
+                                <p className="text-xl font-bold">{t.mission.imageCaption}</p>
                             </div>
                         </div>
                     </motion.div>
@@ -43,25 +48,25 @@ const Mission = () => {
                         className="order-1 lg:order-2"
                     >
                         <SectionTitle
-                            title={content.mission.title}
+                            title={t.mission.title}
                             center={false}
                         />
 
                         <div className="text-[var(--color-text-light)] text-lg leading-relaxed whitespace-pre-line font-medium">
                             <p className="mb-6 border-l-4 border-[var(--color-primary)] pl-6 italic text-gray-600">
-                                "Biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq."
+                                {t.mission.quote}
                             </p>
-                            {content.mission.text}
+                            {t.mission.text}
                         </div>
 
                         <div className="grid grid-cols-2 gap-6" style={{ marginTop: '40px' }}>
                             <div className="flex flex-col gap-2">
                                 <span className="text-4xl font-extrabold text-[var(--color-primary)]">100%</span>
-                                <span className="font-bold text-gray-600">Təbii Məhsul</span>
+                                <span className="font-bold text-gray-600">{t.mission.stats.natural}</span>
                             </div>
                             <div className="flex flex-col gap-2">
                                 <span className="text-4xl font-extrabold text-[var(--color-primary)]">200+</span>
-                                <span className="font-bold text-gray-600">Hektar Sahə</span>
+                                <span className="font-bold text-gray-600">{t.mission.stats.area}</span>
                             </div>
                         </div>
                     </motion.div>

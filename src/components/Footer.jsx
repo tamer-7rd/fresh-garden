@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 import logoImage from '../assets/images/logo.png';
 
 const Footer = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <footer className="bg-[#1a1a1a] text-white" style={{ paddingTop: '40px', paddingBottom: '30px' }}>
             <div className="container">
@@ -22,15 +27,15 @@ const Footer = () => {
                             </div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-                            Təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısı.
+                            {t.footer.tagline}
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div className="flex-1 flex flex-col items-center">
-                        <h4 className="font-bold text-lg" style={{ marginBottom: '15px' }}>Bölmələr</h4>
-                        <nav className="flex flex-col gap-3 text-gray-400 items-center" aria-label="Footer naviqasiya">
-                            {content.navigation.map((item) => (
+                        <h4 className="font-bold text-lg" style={{ marginBottom: '15px' }}>{t.footer.sections}</h4>
+                        <nav className="flex flex-col gap-3 text-gray-400 items-center" aria-label={t.header.footerNav}>
+                            {t.navigation.map((item) => (
                                 <Link
                                     key={item.path}
                                     to={item.path}
@@ -45,7 +50,7 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div className="flex-1 flex flex-col items-center md:items-end">
                         <div className="flex flex-col items-center md:items-start">
-                            <h4 className="font-bold text-lg" style={{ marginBottom: '15px' }}>Əlaqə</h4>
+                            <h4 className="font-bold text-lg" style={{ marginBottom: '15px' }}>{t.footer.contact}</h4>
                             <div className="flex flex-col gap-3 text-gray-400">
                                 <a
                                     href={`tel:${content.contact.phone}`}
@@ -80,7 +85,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="border-t border-gray-800 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-3" style={{ paddingTop: '20px' }}>
                     <span className="text-center md:text-left">
-                        © {new Date().getFullYear()} {content.company.name}. Bütün hüquqlar qorunur.
+                        © {new Date().getFullYear()} {content.company.name}. {t.footer.copyright}
                     </span>
                     <span className="text-gray-400 text-xs md:text-sm">
                         Made by <span className="text-[var(--color-primary)] font-semibold">T&T Lab</span>

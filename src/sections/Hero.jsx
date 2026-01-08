@@ -3,6 +3,8 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,6 +12,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 const Hero = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section className="relative">
             <Swiper
@@ -26,13 +31,13 @@ const Hero = () => {
                 navigation={false}
                 className="h-[65vh] md:h-[85vh] cursor-grab active:cursor-grabbing"
             >
-                {content.hero.slides.map((slide, index) => (
+                {t.hero.slides.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div className="relative h-full">
                             {/* Background Image */}
                             <div
                                 className="absolute inset-0 bg-cover bg-center"
-                                style={{ backgroundImage: `url(${slide.image})` }}
+                                style={{ backgroundImage: `url(${content.hero.slides[index]?.image})` }}
                             >
                                 {/* Overlay - Slightly darker for better text readability */}
                                 <div className="absolute inset-0 bg-black/60"></div>
@@ -56,7 +61,7 @@ const Hero = () => {
                                         </p>
 
                                         <Button href="#about">
-                                            Daha ətraflı
+                                            {t.buttons.learnMore}
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                             </svg>
@@ -77,7 +82,7 @@ const Hero = () => {
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block"
             >
                 <div className="flex flex-col items-center gap-3">
-                    <span className="text-white/90 text-sm font-semibold tracking-widest uppercase shadow-sm">Aşağı sürüşdür</span>
+                    <span className="text-white/90 text-sm font-semibold tracking-widest uppercase shadow-sm">{t.buttons.scrollDown}</span>
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ repeat: Infinity, duration: 2 }}

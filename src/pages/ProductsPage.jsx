@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 import OptimizedImage from '../components/OptimizedImage';
 import SEO from '../components/SEO';
 
 const ProductsPage = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -44,7 +49,7 @@ const ProductsPage = () => {
                         className="relative text-center px-4"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-                            {content.products.title}
+                            {t.products.title}
                         </h1>
                     </motion.div>
                 </section>
@@ -58,7 +63,7 @@ const ProductsPage = () => {
                             animate="visible"
                             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                         >
-                            {content.products.items.map((product, index) => (
+                            {t.products.items.map((product, index) => (
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
@@ -68,14 +73,14 @@ const ProductsPage = () => {
                                     <div className="product-card h-full flex flex-col">
                                         <div className="relative overflow-hidden shrink-0">
                                             <OptimizedImage
-                                                src={product.image}
+                                                src={content.products.items[index]?.image}
                                                 alt={product.name}
                                                 aspectRatio="4/3"
                                                 className="group-hover:scale-110 transition-transform duration-700"
                                                 objectFit="cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                                                <span className="text-white font-semibold text-lg tracking-wide">Daha ətraflı</span>
+                                                <span className="text-white font-semibold text-lg tracking-wide">{t.buttons.learnMore}</span>
                                             </div>
                                         </div>
                                         <div className="product-card-content flex-grow flex flex-col p-6 text-center">
@@ -84,7 +89,7 @@ const ProductsPage = () => {
                                                 {product.description}
                                             </p>
                                             <div className="mt-auto pt-4 border-t border-gray-100">
-                                                <span className="text-[var(--color-primary)] font-bold">Mövcuddur</span>
+                                                <span className="text-[var(--color-primary)] font-bold">{t.buttons.available}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -106,30 +111,29 @@ const ProductsPage = () => {
                             style={{ padding: '40px' }}
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)]" style={{ marginBottom: '25px' }}>
-                                Keyfiyyətli Meyvələr
+                                {t.products.qualityTitle}
                             </h2>
                             <p className="text-[var(--color-text-light)] text-lg md:text-xl leading-relaxed font-medium">
-                                Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi,
-                                eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz <span className="text-[var(--color-primary)] font-bold">təbii üsullarla</span> yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
+                                {t.products.qualityText} <span className="text-[var(--color-primary)] font-bold">{t.products.qualityHighlight}</span>{t.products.qualityTextEnd}
                             </p>
                             <div className="flex justify-center gap-8" style={{ marginTop: '40px' }}>
                                 <div className="flex flex-col items-center">
                                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center" style={{ marginBottom: '10px' }}>
                                         <span className="text-3xl">🌱</span>
                                     </div>
-                                    <span className="font-bold text-sm">100% Təbii</span>
+                                    <span className="font-bold text-sm">{t.products.badges.natural}</span>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center" style={{ marginBottom: '10px' }}>
                                         <span className="text-3xl">🚛</span>
                                     </div>
-                                    <span className="font-bold text-sm">Sürətli Çatdırılma</span>
+                                    <span className="font-bold text-sm">{t.products.badges.delivery}</span>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center" style={{ marginBottom: '10px' }}>
                                         <span className="text-3xl">⭐️</span>
                                     </div>
-                                    <span className="font-bold text-sm">Yüksək Keyfiyyət</span>
+                                    <span className="font-bold text-sm">{t.products.badges.quality}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -141,4 +145,3 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
-

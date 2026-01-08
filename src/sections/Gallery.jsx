@@ -2,12 +2,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 import OptimizedImage from '../components/OptimizedImage';
 
 // Import Swiper styles
 import 'swiper/css';
 
 const Gallery = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <section className="section-padding">
             <div className="container">
@@ -19,10 +24,10 @@ const Gallery = () => {
                     className="mb-12 md:mb-16 text-center"
                 >
                     <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--color-text)]" style={{ marginBottom: '20px' }}>
-                        {content.gallery.title}
+                        {t.gallery.title}
                     </h2>
                     <p className="text-lg md:text-xl font-medium text-[var(--color-text-light)]">
-                        Bağlarımızdan görüntülər
+                        {t.gallery.subtitle}
                     </p>
                 </motion.div>
             </div>
@@ -71,7 +76,7 @@ const Gallery = () => {
                             >
                                 <OptimizedImage
                                     src={image}
-                                    alt={`Fresh Garden - Bağ görüntüsü ${index + 1}`}
+                                    alt={`Fresh Garden - ${index + 1}`}
                                     className="transition-transform duration-500 group-hover:scale-110"
                                     style={{ height: '512px' }}
                                     objectFit="cover"

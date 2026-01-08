@@ -1,14 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { content } from '../content/content';
+import { useLanguage, languages } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 import logoImage from '../assets/images/logo.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
     const location = useLocation();
+    const { language, changeLanguage } = useLanguage();
+    const langDropdownRef = useRef(null);
+
+    // Get translations for current language
+    const t = translations[language];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,9 +30,88 @@ const Header = () => {
     useEffect(() => {
         setIsMobileMenuOpen(false);
         setIsSearchOpen(false);
+        setIsLangDropdownOpen(false);
     }, [location]);
 
-    // ... imports remain the same
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+                setIsLangDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    // Desktop language dropdown button
+    const LanguageDropdown = () => (
+        <div className="language-dropdown-container" ref={langDropdownRef}>
+            <button
+                className="language-dropdown-btn"
+                onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+                aria-label="Select language"
+            >
+                <span className="lang-code">{languages[language].name}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className={`h-3 w-3 transition-transform ${isLangDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+
+            <AnimatePresence>
+                {isLangDropdownOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="language-dropdown-menu"
+                    >
+                        {Object.values(languages).map((lang) => (
+                            <button
+                                key={lang.code}
+                                onClick={() => {
+                                    changeLanguage(lang.code);
+                                    setIsLangDropdownOpen(false);
+                                }}
+                                className={`language-dropdown-item ${language === lang.code ? 'active' : ''}`}
+                            >
+                                <span className="lang-name">{lang.fullName}</span>
+                                <span className="lang-code-small">{lang.name}</span>
+                                {language === lang.code && (
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 checkmark" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                )}
+                            </button>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+
+    // Mobile language switcher (keep as is)
+    const LanguageSwitcher = ({ isMobile = false }) => (
+        <div className={`language-switcher ${isMobile ? 'language-switcher-mobile' : ''}`}>
+            {Object.values(languages).map((lang, index) => (
+                <span key={lang.code} className="lang-item-wrapper">
+                    <button
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`lang-btn ${language === lang.code ? 'active' : ''}`}
+                        aria-label={`Switch to ${lang.fullName}`}
+                    >
+                        {lang.name}
+                    </button>
+                    {index < Object.values(languages).length - 1 && (
+                        <span className="lang-separator">|</span>
+                    )}
+                </span>
+            ))}
+        </div>
+    );
+
     return (
         <>
             {/* Top Bar */}
@@ -68,8 +155,8 @@ const Header = () => {
                         </div>
 
                         {/* Desktop Navigation */}
-                        <nav className="header-nav" aria-label="Əsas naviqasiya">
-                            {content.navigation.map((item) => (
+                        <nav className="header-nav" aria-label={t.header.mainNav}>
+                            {t.navigation.map((item) => (
                                 <Link
                                     key={item.path}
                                     to={item.path}
@@ -81,13 +168,16 @@ const Header = () => {
                         </nav>
                     </div>
 
-                    {/* Right Section: Search + Contact Button */}
+                    {/* Right Section: Language Switcher + Search + Contact Button */}
                     <div className="header-right-desktop">
+                        {/* Language Dropdown */}
+                        <LanguageDropdown />
+
                         {/* Search Button */}
                         <button
                             className="search-btn"
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
-                            aria-label="Axtarış"
+                            aria-label={t.buttons.search}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -111,7 +201,7 @@ const Header = () => {
                         <button
                             className="search-btn"
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
-                            aria-label="Axtarış"
+                            aria-label={t.buttons.search}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -121,7 +211,7 @@ const Header = () => {
                         <button
                             className="mobile-menu-btn"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            aria-label="Menyu"
+                            aria-label={t.buttons.menu}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                 {isMobileMenuOpen ? (
@@ -147,7 +237,7 @@ const Header = () => {
                                 <div className="search-input-wrapper">
                                     <input
                                         type="text"
-                                        placeholder="Məhsul axtar..."
+                                        placeholder={t.buttons.searchPlaceholder}
                                         className="search-input"
                                         autoFocus
                                     />
@@ -172,7 +262,12 @@ const Header = () => {
                             className="mobile-menu-dropdown"
                         >
                             <div className="header-container mobile-nav-container">
-                                {content.navigation.map((item) => (
+                                {/* Language Switcher for Mobile */}
+                                <div className="mobile-language-switcher">
+                                    <LanguageSwitcher isMobile={true} />
+                                </div>
+
+                                {t.navigation.map((item) => (
                                     <Link
                                         key={item.path}
                                         to={item.path}

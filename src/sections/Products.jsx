@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import OptimizedImage from '../components/OptimizedImage';
 import { content } from '../content/content';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../content/translations';
 
 const Products = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -28,8 +33,8 @@ const Products = () => {
         <section className="section-padding bg-alt">
             <div className="container">
                 <SectionTitle
-                    title={content.products.title}
-                    subtitle="Təzə və keyfiyyətli meyvələrimiz"
+                    title={t.products.title}
+                    subtitle={t.products.subtitle}
                     center={false}
                     underline={false}
                 />
@@ -41,7 +46,7 @@ const Products = () => {
                     viewport={{ once: true, margin: '-50px' }}
                     className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
                 >
-                    {content.products.items.map((product, index) => (
+                    {t.products.items.map((product, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
@@ -52,7 +57,7 @@ const Products = () => {
                                 <div className="product-card h-full flex flex-col">
                                     <div className="relative overflow-hidden shrink-0">
                                         <OptimizedImage
-                                            src={product.image}
+                                            src={content.products.items[index]?.image}
                                             alt={product.name}
                                             aspectRatio="4/3"
                                             className="group-hover:scale-110 transition-transform duration-700"
@@ -61,7 +66,7 @@ const Products = () => {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                             <div className="absolute bottom-4 left-0 right-0 text-center text-white p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                                 <span className="inline-block px-4 py-1.5 border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
-                                                    Ətraflı bax
+                                                    {t.products.viewDetails}
                                                 </span>
                                             </div>
                                         </div>
@@ -96,7 +101,7 @@ const Products = () => {
                         to="/mehsullarimiz"
                         className="btn btn-secondary inline-flex"
                     >
-                        Bütün məhsullar
+                        {t.products.allProducts}
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
