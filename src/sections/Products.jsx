@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import OptimizedImage from '../components/OptimizedImage';
+import FruitModal from '../components/FruitModal';
 import { content } from '../content/content';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../content/translations';
@@ -9,6 +11,21 @@ import { translations } from '../content/translations';
 const Products = () => {
     const { language } = useLanguage();
     const t = translations[language];
+
+    // Modal state
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedFruit, setSelectedFruit] = useState({ index: 0, name: '' });
+
+    const openModal = (index, name, e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setSelectedFruit({ index, name });
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -65,9 +82,12 @@ const Products = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                             <div className="absolute bottom-4 left-0 right-0 text-center text-white p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                                <span className="inline-block px-4 py-1.5 border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+                                                <button
+                                                    onClick={(e) => openModal(index, product.name, e)}
+                                                    className="inline-block px-4 py-1.5 border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold hover:bg-white/30 transition-colors cursor-pointer"
+                                                >
                                                     {t.products.viewDetails}
-                                                </span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -108,6 +128,14 @@ const Products = () => {
                     </Link>
                 </motion.div>
             </div>
+
+            {/* Fruit Modal */}
+            <FruitModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                fruitIndex={selectedFruit.index}
+                fruitName={selectedFruit.name}
+            />
         </section>
     );
 };

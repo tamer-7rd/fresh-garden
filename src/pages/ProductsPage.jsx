@@ -1,13 +1,28 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { content } from '../content/content';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../content/translations';
 import OptimizedImage from '../components/OptimizedImage';
+import FruitModal from '../components/FruitModal';
 import SEO from '../components/SEO';
 
 const ProductsPage = () => {
     const { language } = useLanguage();
     const t = translations[language];
+
+    // Modal state
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedFruit, setSelectedFruit] = useState({ index: 0, name: '' });
+
+    const openModal = (index, name) => {
+        setSelectedFruit({ index, name });
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -68,7 +83,17 @@ const ProductsPage = () => {
                                     key={index}
                                     variants={itemVariants}
                                     whileHover={{ y: -10 }}
-                                    className="group h-full"
+                                    className="group h-full cursor-pointer"
+                                    onClick={() => openModal(index, product.name)}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' || e.key === ' ') {
+                                            e.preventDefault();
+                                            openModal(index, product.name);
+                                        }
+                                    }}
+                                    aria-label={`${product.name} - ${t.products.viewDetails}`}
                                 >
                                     <div className="product-card h-full flex flex-col">
                                         <div className="relative overflow-hidden shrink-0">
@@ -80,7 +105,7 @@ const ProductsPage = () => {
                                                 objectFit="cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                                                <span className="text-white font-semibold text-lg tracking-wide">{t.buttons.learnMore}</span>
+                                                <span className="text-white font-semibold text-lg tracking-wide">{t.products.viewDetails}</span>
                                             </div>
                                         </div>
                                         <div className="product-card-content flex-grow flex flex-col p-6 text-center">
@@ -140,8 +165,17 @@ const ProductsPage = () => {
                     </div>
                 </section>
             </main>
+
+            {/* Fruit Modal */}
+            <FruitModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                fruitIndex={selectedFruit.index}
+                fruitName={selectedFruit.name}
+            />
         </>
     );
 };
 
 export default ProductsPage;
+

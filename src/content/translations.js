@@ -135,6 +135,13 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         header: {
             mainNav: 'Əsas naviqasiya',
             footerNav: 'Footer naviqasiya'
+        },
+
+        // Modal
+        modal: {
+            varietiesTitle: 'Çeşid',
+            noData: 'Məlumat yoxdur',
+            close: 'Bağla'
         }
     },
 
@@ -272,6 +279,13 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         header: {
             mainNav: 'Главная навигация',
             footerNav: 'Навигация футера'
+        },
+
+        // Modal
+        modal: {
+            varietiesTitle: 'Сорта',
+            noData: 'Нет данных',
+            close: 'Закрыть'
         }
     },
 
@@ -409,6 +423,13 @@ Quality, reliability, and sustainable development are our core values. Thanks to
         header: {
             mainNav: 'Main navigation',
             footerNav: 'Footer navigation'
+        },
+
+        // Modal
+        modal: {
+            varietiesTitle: 'Varieties',
+            noData: 'No data available',
+            close: 'Close'
         }
     }
 };

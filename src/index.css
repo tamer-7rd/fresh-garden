@@ -949,4 +949,116 @@ img {
   margin: 0 2px;
 }
 
+/* Fruit Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 20px;
+}
 
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: 32px;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 40px;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-text-light);
+  transition: all var(--duration-fast) var(--easing-smooth);
+}
+
+.modal-close-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.modal-close-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.modal-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  padding-right: 40px;
+}
+
+.modal-section {
+  margin-top: 16px;
+}
+
+.modal-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.variety-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.variety-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(0, 128, 0, 0.08), rgba(128, 180, 53, 0.12));
+  color: var(--color-primary-dark);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 128, 0, 0.15);
+  transition: all var(--duration-fast) var(--easing-smooth);
+}
+
+.variety-chip:hover {
+  background: linear-gradient(135deg, rgba(0, 128, 0, 0.15), rgba(128, 180, 53, 0.2));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.modal-no-data {
+  color: var(--color-text-light);
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+}
