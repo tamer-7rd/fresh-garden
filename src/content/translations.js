@@ -297,7 +297,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         hero: {
             slides: [
                 {
-                    title: 'Fresh Garden Guba',
+                    title: 'Fresh Garden Quba',
                     subtitle: 'A local fruit producer that combines the purity of nature, the fertility of the land, and the value of our labor'
                 },
                 {
