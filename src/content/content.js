@@ -45,7 +45,7 @@ import persikImg from '../assets/images/persik.jpg';
 export const content = {
     // Company info
     company: {
-        name: 'Fresh Garden',
+        name: 'Fresh Garden Quba',
         tagline: 'Quba',
         phone: '+994 55 660 10 50',
         email: 'freshgardenquba.mmc@gmail.com',

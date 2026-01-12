@@ -44,3 +44,15 @@ src/assets/video/
 *.key
 *.crt
 *.p12
+
+# Backup and temp files
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+.cache/
+
+# Build artifacts
+.vercel
+.netlify

@@ -54,7 +54,7 @@ Follow these steps to set up the project locally:
     pnpm dev
     ```
 
-    The app will natively run at `http://localhost:5173`.
+    The app will run at `http://localhost:5173`.
 
 ### Building for Production
 
@@ -76,7 +76,9 @@ npm run preview
 src/
 ├── assets/         # Images, icons, and static assets
 ├── components/     # Reusable UI components (Header, Footer, SEO, etc.)
-├── content/        # Centralized content management (text, SEO data)
+├── content/        # Centralized content management (text, SEO data, translations)
+├── context/        # React Context providers (Language context)
+├── data/           # Data files (fruit varieties, product information)
 ├── pages/          # Main application pages (Home, About, Products, etc.)
 ├── sections/       # Sectional components (Hero, Contact, Gallery, etc.)
 ├── index.css       # Global styles and Tailwind imports
@@ -85,7 +87,7 @@ src/
 
 ## 📞 Contact
 
--   **Company**: Fresh Garden
+-   **Company**: Fresh Garden Quba
 -   **Location**: Qusar rayonu, Caqar kəndi, Azərbaycan
 -   **Phone**: +994 55 660 10 50
 -   **Email**: freshgardenquba.mmc@gmail.com
