@@ -10,7 +10,7 @@ export const seoData = {
         type: 'website',
         author: 'Fresh Garden',
         themeColor: '#22c55e',
-        defaultImage: '/og-image.jpg'
+        defaultImage: '/og-image.png'
     },
 
     // Page-specific SEO
@@ -66,7 +66,7 @@ export const seoData = {
         '@type': 'LocalBusiness',
         '@id': 'https://freshgardenquba.az/#business',
         name: 'Fresh Garden',
-        image: 'https://freshgardenquba.az/og-image.jpg',
+        image: 'https://freshgardenquba.az/og-image.png',
         telephone: '+994-55-660-10-50',
         email: 'freshgardenquba.mmc@gmail.com',
         address: {
