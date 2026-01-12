@@ -100,7 +100,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             qualityTitle: 'Keyfiyyətli Meyvələr',
             qualityText: 'Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz',
             qualityHighlight: 'təbii üsullarla',
-            qualityTextEnd: 'yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.',
+            qualityTextEnd: ' yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.',
             badges: {
                 natural: '100% Təbii',
                 delivery: 'Sürətli Çatdırılma',
