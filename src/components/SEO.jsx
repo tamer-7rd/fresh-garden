@@ -56,8 +56,8 @@ const SEO = ({
             <meta name="twitter:image" content={metaImage} />
 
             {/* Open Graph Image Dimensions */}
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
+            <meta property="og:image:width" content="1024" />
+            <meta property="og:image:height" content="1024" />
 
             {/* Additional structured data */}
             {structuredData && (
