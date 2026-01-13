@@ -1,13 +1,11 @@
+# Fresh Garden Quba - Təbii Meyvələr İstehsalçısı
+# Azerbaijan Fruit Production Company
+
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Sitemap
 Sitemap: https://freshgardenquba.az/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
-
-# Block specific paths if needed
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
