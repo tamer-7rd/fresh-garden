@@ -38,7 +38,7 @@ export const translations = {
             title: 'Haqqımızda',
             text: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
 
-Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.`,
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.`,
             buttonText: 'Daha ətraflı'
         },
 
@@ -51,7 +51,7 @@ Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr t�
 
 Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq. Məhsullarımız həm daxili bazarda supermarketlərə və distribütorlara, həm də xarici ölkələrə ixrac olunur.
 
-Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərlərimizdir.`,
+Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyərləremizdir.`,
             stats: {
                 natural: 'Təbii Məhsul',
                 area: 'Hektar Sahə'
@@ -63,7 +63,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             title: 'Haqqımızda',
             content: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
 
-Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
 
 Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq. Məhsullarımız həm daxili bazarda supermarketlərə və distribütorlara, həm də xarici ölkələrə ixrac olunur.
 
@@ -89,8 +89,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                     description: 'Günəşin istiliyi ilə yetişmiş, şirəli və ətirli nektarinlər.'
                 },
                 {
-                    name: 'Şaftalı',
-                    description: 'Yumşaq, şirəli və ləzzətli şaftalılarımız süfrənizin bəzəyi olacaq.'
+                    name: 'Yastı şaftalı',
+                    description: 'Yumşaq, şirəli və ləzzətli yastı şaftalılarımız süfrənizin bəzəyi olacaq.'
                 },
                 {
                     name: 'Gilas',
@@ -98,9 +98,10 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                 }
             ],
             qualityTitle: 'Keyfiyyətli Meyvələr',
-            qualityText: 'Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz',
+            qualityText: 'Fresh Garden alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz',
             qualityHighlight: 'təbii üsullarla',
             qualityTextEnd: ' yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.',
+
             badges: {
                 natural: '100% Təbii',
                 delivery: 'Sürətli Çatdırılma',
@@ -182,7 +183,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             title: 'О нас',
             text: `Fresh Garden – это местный производитель фруктов, объединяющий чистоту природы, плодородие земли и ценность нашего труда. Компания работает с 2000 года и за эти годы зарекомендовала себя как надежный партнер как на местном, так и на международном рынках.
 
-Наша цель – предоставлять клиентам качественные, натуральные и полезные фрукты. Fresh Garden занимается выращиванием яблок, нектаринов, персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт выращивается натуральными методами, тщательно отбирается и упаковывается с использованием современных технологий.`,
+Наша цель – предоставлять клиентам качественные, натуральные и полезные фрукты. Fresh Garden занимается выращиванием яблок, нектаринов, инжирных персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт выращивается натуральными методами, тщательно отбирается и упаковывается с использованием современных технологий.`,
             buttonText: 'Подробнее'
         },
 
@@ -207,7 +208,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             title: 'О нас',
             content: `Fresh Garden – это местный производитель фруктов, объединяющий чистоту природы, плодородие земли и ценность нашего труда. Компания работает с 2000 года и за эти годы зарекомендовала себя как надежный партнер как на местном, так и на международном рынках.
 
-Наша цель – предоставлять клиентам качественные, натуральные и полезные фрукты. Fresh Garden занимается выращиванием яблок, нектаринов, персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт выращивается натуральными методами, тщательно отбирается и упаковывается с использованием современных технологий.
+Наша цель – предоставлять клиентам качественные, натуральные и полезные фрукты. Fresh Garden занимается выращиванием яблок, нектаринов, инжирных персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт выращивается натуральными методами, тщательно отбирается и упаковывается с использованием современных технологий.
 
 Как Fresh Garden, мы не просто производим фрукты – мы доносим до людей вкус чистой природы. Наша продукция поставляется как в супермаркеты и дистрибьюторам на внутреннем рынке, так и экспортируется в зарубежные страны.
 
@@ -233,8 +234,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                     description: 'Созревшие на солнце, сочные и ароматные нектарины.'
                 },
                 {
-                    name: 'Персик',
-                    description: 'Мягкие, сочные и вкусные персики станут украшением вашего стола.'
+                    name: 'Инжирный персик',
+                    description: 'Мягкие, сочные и вкусные инжирные персики станут украшением вашего стола.'
                 },
                 {
                     name: 'Черешня',
@@ -242,7 +243,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                 }
             ],
             qualityTitle: 'Качественные фрукты',
-            qualityText: 'Fresh Garden занимается выращиванием яблок, нектаринов, персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт',
+            qualityText: 'Fresh Garden занимается выращиванием яблок, нектаринов, инжирных персиков, черешни и других сезонных фруктов, а также организацией оптовой и розничной продажи. Каждый наш продукт',
             qualityHighlight: 'выращивается натуральными методами',
             qualityTextEnd: ', тщательно отбирается и упаковывается с использованием современных технологий.',
             badges: {
@@ -326,7 +327,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             title: 'About Us',
             text: `Fresh Garden is a local fruit producer that combines the purity of nature, the fertility of the land, and the value of our labor. The company has been operating since 2000 and over these years has established itself as a reliable partner in both local and international markets.
 
-Our goal is to provide customers with quality, natural, and healthy fruits. Fresh Garden is engaged in growing apples, nectarines, peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is grown using natural methods, carefully selected, and packaged with modern technologies.`,
+Our goal is to provide customers with quality, natural, and healthy fruits. Fresh Garden is engaged in growing apples, nectarines, donut peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is grown using natural methods, carefully selected, and packaged with modern technologies.`,
             buttonText: 'Learn More'
         },
 
@@ -351,7 +352,7 @@ Quality, reliability, and sustainable development are our core values.`,
             title: 'About Us',
             content: `Fresh Garden is a local fruit producer that combines the purity of nature, the fertility of the land, and the value of our labor. The company has been operating since 2000 and over these years has established itself as a reliable partner in both local and international markets.
 
-Our goal is to provide customers with quality, natural, and healthy fruits. Fresh Garden is engaged in growing apples, nectarines, peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is grown using natural methods, carefully selected, and packaged with modern technologies.
+Our goal is to provide customers with quality, natural, and healthy fruits. Fresh Garden is engaged in growing apples, nectarines, donut peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is grown using natural methods, carefully selected, and packaged with modern technologies.
 
 As Fresh Garden, we don't just produce fruit – we bring the taste of pure nature to people. Our products are supplied to supermarkets and distributors in the domestic market, as well as exported to foreign countries.
 
@@ -377,8 +378,8 @@ Quality, reliability, and sustainable development are our core values. Thanks to
                     description: 'Sun-ripened, juicy, and fragrant nectarines.'
                 },
                 {
-                    name: 'Peach',
-                    description: 'Soft, juicy, and delicious peaches will be the decoration of your table.'
+                    name: 'Donut Peach',
+                    description: 'Soft, juicy, and delicious donut peaches will be the decoration of your table.'
                 },
                 {
                     name: 'Cherry',
@@ -386,7 +387,7 @@ Quality, reliability, and sustainable development are our core values. Thanks to
                 }
             ],
             qualityTitle: 'Quality Fruits',
-            qualityText: 'Fresh Garden is engaged in growing apples, nectarines, peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is',
+            qualityText: 'Fresh Garden is engaged in growing apples, nectarines, donut peaches, cherries, and other seasonal fruits, as well as organizing wholesale and retail sales. Each of our products is',
             qualityHighlight: 'grown using natural methods',
             qualityTextEnd: ', carefully selected, and packaged with modern technologies.',
             badges: {

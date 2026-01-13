@@ -81,7 +81,7 @@ export const content = {
         title: 'Haqqımızda',
         text: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
 
-Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.`,
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.`,
         image: aboutImg,
         buttonText: 'Daha ətraflı'
     },
@@ -103,7 +103,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         headerImage: aboutPageBg,
         content: `Fresh Garden – təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısıdır. Şirkət 2000-ci ildən fəaliyyət göstərir və bu illər ərzində həm yerli, həm də beynəlxalq bazarlarda etibarlı tərəfdaş kimi tanınmışdır.
 
-Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
+Məqsədimiz müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim etməkdir. Fresh Garden alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələrin becərilməsi, eləcə də topdan və pərakəndə satışının təşkili ilə məşğuldur. Hər bir məhsulumuz təbii üsullarla yetişdirilir, xüsusi qayğı ilə seçilir və müasir texnologiyalarla qablaşdırılır.
 
 Fresh Garden olaraq, biz yalnız meyvə istehsal etmirik – biz insanlara təmiz təbiətin dadını çatdırırıq. Məhsullarımız həm daxili bazarda supermarketlərə və distribütorlara, həm də xarici ölkələrə ixrac olunur.
 
@@ -129,9 +129,9 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                 description: 'Günəşin istiliyi ilə yetişmiş, şirəli və ətirli nektarinlər.'
             },
             {
-                name: 'Şaftalı',
+                name: 'Yastı şaftalı',
                 image: persikImg,
-                description: 'Yumşaq, şirəli və ləzzətli şaftalılarımız süfrənizin bəzəyi olacaq.'
+                description: 'Yumşaq, şirəli və ləzzətli yastı şaftalılarımız süfrənizin bəzəyi olacaq.'
             },
             {
                 name: 'Gilas',

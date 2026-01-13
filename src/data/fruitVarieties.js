@@ -28,8 +28,8 @@ export const fruitVarieties = {
             'Big Fire'
         ]
     },
-    shaftali: {
-        key: 'shaftali',
+    yastishaftali: {
+        key: 'yastishaftali',
         varieties: [
             'Samanta',
             'Zumba',
@@ -83,6 +83,6 @@ export const getVarietiesByKey = (key) => {
 };
 
 // Mapping from product index to fruit key (for integration with existing code)
-export const productIndexToFruitKey = ['alma', 'nektarin', 'shaftali', 'gilas'];
+export const productIndexToFruitKey = ['alma', 'nektarin', 'yastishaftali', 'gilas'];
 
 export default fruitVarieties;

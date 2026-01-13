@@ -17,8 +17,8 @@ export const seoData = {
     pages: {
         home: {
             title: 'Fresh Garden Quba | Təbii Meyvələr İstehsalçısı',
-            description: 'Fresh Garden - Qubada 2000-ci ildən fəaliyyət göstərən yerli meyvə istehsalçısı. Təbii alma, nektarin, şaftalı, gilas və digər mövsümi meyvələr. Keyfiyyət və təbiət.',
-            keywords: 'Fresh Garden, Quba meyvələr, təbii meyvələr, alma, nektarin, şaftalı, gilas, Azərbaycan meyvələri, yerli istehsal, sağlam qida',
+            description: 'Fresh Garden - Qubada 2000-ci ildən fəaliyyət göstərən yerli meyvə istehsalçısı. Təbii alma, nektarin, yastı şaftalı, gilas və digər mövsümi meyvələr. Keyfiyyət və təbiət.',
+            keywords: 'Fresh Garden, Quba meyvələr, təbii meyvələr, alma, nektarin, yastı şaftalı, gilas, Azərbaycan meyvələri, yerli istehsal, sağlam qida',
             canonical: '/'
         },
         about: {
@@ -29,8 +29,8 @@ export const seoData = {
         },
         products: {
             title: 'Məhsullarımız | Fresh Garden Quba',
-            description: 'Fresh Garden məhsulları - təbii üsullarla yetişdirilmiş alma, nektarin, şaftalı, gilas. 100% təbii, yüksək keyfiyyətli Quba meyvələri.',
-            keywords: 'alma, nektarin, şaftalı, gilas, təbii meyvə, Quba alması, mövsümi meyvələr, topdan satış',
+            description: 'Fresh Garden məhsulları - təbii üsullarla yetişdirilmiş alma, nektarin, yastı şaftalı, gilas. 100% təbii, yüksək keyfiyyətli Quba meyvələri.',
+            keywords: 'alma, nektarin, yastı şaftalı, gilas, təbii meyvə, Quba alması, mövsümi meyvələr, topdan satış',
             canonical: '/mehsullarimiz'
         }
     },

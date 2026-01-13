@@ -1,6 +1,6 @@
 # Fresh Garden Quba
 
-Fresh Garden Quba is a modern, responsive business card website for a local fruit producer based in Quba, Azerbaijan. The website showcases the company's high-quality apples, nectarines, peaches, and cherries, reflecting their commitment to nature, purity, and hard work.
+Fresh Garden Quba is a modern, responsive business card website for a local fruit producer based in Quba, Azerbaijan. The website showcases the company's high-quality apples, nectarines, donut peaches, and cherries, reflecting their commitment to nature, purity, and hard work.
 
 ## 🌟 Features
 
