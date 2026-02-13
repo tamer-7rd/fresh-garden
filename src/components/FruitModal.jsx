@@ -11,6 +11,7 @@ const FruitModal = ({ isOpen, onClose, fruitIndex, fruitName }) => {
     const closeButtonRef = useRef(null);
     const [selectedVariety, setSelectedVariety] = useState(null);
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [imageLoaded, setImageLoaded] = useState(false);
     const pendingVariety = useRef(null);
     const hasAnimatedChips = useRef(false);
 
@@ -28,6 +29,7 @@ const FruitModal = ({ isOpen, onClose, fruitIndex, fruitName }) => {
     const switchView = useCallback((variety) => {
         if (isTransitioning) return;
         setIsTransitioning(true);
+        setImageLoaded(false);
         pendingVariety.current = variety;
         // After fade-out completes, swap content
         setTimeout(() => {
@@ -38,6 +40,15 @@ const FruitModal = ({ isOpen, onClose, fruitIndex, fruitName }) => {
             });
         }, 80);
     }, [isTransitioning]);
+
+    // Preload image on hover for faster loading
+    const preloadImage = useCallback((variety) => {
+        const url = getVarietyImageUrl(fruitKey, variety);
+        if (url) {
+            const img = new Image();
+            img.src = url;
+        }
+    }, [fruitKey]);
 
     // Handle escape key
     const handleEscapeKey = useCallback((e) => {
@@ -184,10 +195,17 @@ const FruitModal = ({ isOpen, onClose, fruitIndex, fruitName }) => {
 
                                     {varietyImageUrl && (
                                         <div className="variety-detail-image-wrapper">
+                                            {!imageLoaded && (
+                                                <div className="variety-image-loader">
+                                                    <div className="variety-image-spinner" />
+                                                </div>
+                                            )}
                                             <img
                                                 src={varietyImageUrl}
                                                 alt={selectedVariety}
                                                 className="variety-detail-image"
+                                                style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.3s ease' }}
+                                                onLoad={() => setImageLoaded(true)}
                                             />
                                         </div>
                                     )}
@@ -229,6 +247,7 @@ const FruitModal = ({ isOpen, onClose, fruitIndex, fruitName }) => {
                                                             }
                                                         }}
                                                         onClick={() => switchView(variety)}
+                                                        onMouseEnter={() => preloadImage(variety)}
                                                         role="button"
                                                         tabIndex={0}
                                                         onKeyDown={(e) => {
