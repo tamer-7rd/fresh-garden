@@ -47,8 +47,8 @@ export const content = {
     company: {
         name: 'Fresh Garden Quba',
         tagline: 'Quba',
-        phone: '+994 55 660 10 50',
-        email: 'freshgardenquba.mmc@gmail.com',
+        phone: '+994 10 712 10 25',
+        email: 'info@freshgardenquba.az',
         address: 'Qusar rayonu, Caqar kəndi,  Azərbaycan',
 
     },

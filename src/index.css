@@ -1046,6 +1046,8 @@ img {
   border-radius: var(--radius-full);
   border: 1px solid rgba(0, 128, 0, 0.15);
   transition: all var(--duration-fast) var(--easing-smooth);
+  cursor: pointer;
+  user-select: none;
 }
 
 .variety-chip:hover {
@@ -1061,4 +1063,78 @@ img {
   text-align: center;
   background: var(--color-bg-alt);
   border-radius: var(--radius-md);
+}
+
+/* Modal content size managed by framer-motion layout */
+
+.modal-content-detail {
+  max-width: 420px;
+}
+
+/* Variety Detail View */
+.variety-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.variety-detail-name {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  padding-right: 40px;
+  align-self: flex-start;
+}
+
+.variety-detail-image-wrapper {
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 24px;
+}
+
+.variety-detail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.variety-return-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  padding: 14px 24px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-smooth);
+}
+
+.variety-return-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.variety-return-btn:active {
+  transform: translateY(0);
+}
+
+.variety-return-arrow {
+  font-size: 20px;
+  line-height: 1;
 }

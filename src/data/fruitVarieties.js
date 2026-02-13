@@ -4,6 +4,7 @@
 export const fruitVarieties = {
     alma: {
         key: 'alma',
+        folder: 'alma_cheshid',
         varieties: [
             'Buckey gala',
             'Pinkgold',
@@ -17,6 +18,7 @@ export const fruitVarieties = {
     },
     nektarin: {
         key: 'nektarin',
+        folder: 'nektarin_cheshid',
         varieties: [
             'Queen diaymond',
             'Red Fair',
@@ -30,6 +32,7 @@ export const fruitVarieties = {
     },
     yastishaftali: {
         key: 'yastishaftali',
+        folder: 'yasti_shaftali_cheshid',
         varieties: [
             'Samanta',
             'Zumba',
@@ -47,6 +50,7 @@ export const fruitVarieties = {
     },
     gilas: {
         key: 'gilas',
+        folder: 'Gilas_cheshid',
         varieties: [
             'Burlat',
             'Grace star',
@@ -74,6 +78,45 @@ export const fruitVarieties = {
             'Gigant red'
         ]
     }
+};
+
+// Override map for variety names whose filenames don't follow the standard space→underscore rule
+const filenameOverrides = {
+    'Granny smith Challenger': 'Grannysmith_challenger',
+    'Sabira': 'Sabrina',
+    'N.DE MECHED': 'N.DE_MECHED',
+};
+
+// Eagerly import all variety images using Vite's import.meta.glob
+const varietyImages = import.meta.glob(
+    '../assets/images/*_cheshid/*.jpeg',
+    { eager: true, import: 'default' }
+);
+
+// Build a lookup map: lowercase filename (without extension) → resolved URL
+const imageLookup = {};
+for (const [path, url] of Object.entries(varietyImages)) {
+    // path looks like "../assets/images/alma_cheshid/Buckey_gala.jpeg"
+    const filename = path.split('/').pop().replace('.jpeg', '').toLowerCase();
+    imageLookup[filename] = url;
+}
+
+/**
+ * Get the resolved image URL for a specific variety.
+ * Returns the Vite-resolved URL string, or null if not found.
+ */
+export const getVarietyImageUrl = (fruitKey, varietyName) => {
+    const normalizedKey = fruitKey?.toLowerCase().replace(/[^a-z]/g, '');
+    const fruitData = fruitVarieties[normalizedKey];
+    if (!fruitData) return null;
+
+    // Determine filename: check overrides first, then default space→underscore
+    const overrideName = filenameOverrides[varietyName];
+    const filename = overrideName || varietyName.replace(/ /g, '_');
+
+    // Look up case-insensitively
+    const lookupKey = filename.toLowerCase();
+    return imageLookup[lookupKey] || null;
 };
 
 // Helper function to get varieties by fruit key

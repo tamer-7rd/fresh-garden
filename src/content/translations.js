@@ -142,7 +142,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         modal: {
             varietiesTitle: 'Çeşid',
             noData: 'Məlumat yoxdur',
-            close: 'Bağla'
+            close: 'Bağla',
+            returnToList: 'Sortlara qayıt'
         }
     },
 
@@ -286,7 +287,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         modal: {
             varietiesTitle: 'Сорта',
             noData: 'Нет данных',
-            close: 'Закрыть'
+            close: 'Закрыть',
+            returnToList: 'Вернуться к списку сортов'
         }
     },
 
@@ -430,7 +432,8 @@ Quality, reliability, and sustainable development are our core values. Thanks to
         modal: {
             varietiesTitle: 'Varieties',
             noData: 'No data available',
-            close: 'Close'
+            close: 'Close',
+            returnToList: 'Return to varieties'
         }
     }
 };
