@@ -104,8 +104,21 @@ const ProductsPage = () => {
                                                 className="group-hover:scale-110 transition-transform duration-700"
                                                 objectFit="cover"
                                             />
+                                            {/* Desktop hover overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
                                                 <span className="text-white font-semibold text-lg tracking-wide">{t.products.viewDetails}</span>
+                                            </div>
+                                            {/* Mobile-only glass button */}
+                                            <div className="mobile-product-overlay">
+                                                <button
+                                                    className="mobile-product-btn"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        openModal(index, product.name);
+                                                    }}
+                                                >
+                                                    {t.products.viewDetails}
+                                                </button>
                                             </div>
                                         </div>
                                         <div className="product-card-content flex-grow flex flex-col p-6 text-center">

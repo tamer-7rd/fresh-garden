@@ -77,12 +77,12 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         products: {
             title: 'Məhsullarımız',
             subtitle: 'Təzə və keyfiyyətli meyvələrimiz',
-            viewDetails: 'Ətraflı bax',
-            allProducts: 'Bütün məhsullar',
+            viewDetails: 'Çeşidlərə keç',
+            allProducts: 'Ətraflı bax',
             items: [
                 {
                     name: 'Alma',
-                    description: 'Qırmızı, şirəli və vitaminli Quba alması. Dadı ilə fərqlənir.'
+                    description: 'Şirəli və vitaminli almalarımız. Dadı ilə fərqlənir.'
                 },
                 {
                     name: 'Nektarin',
@@ -94,7 +94,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                 },
                 {
                     name: 'Gilas',
-                    description: 'Tünd qırmızı, iri və dadlı gilas növlərimiz.'
+                    description: 'İri və dadlı gilas növlərimiz.'
                 }
             ],
             qualityTitle: 'Keyfiyyətli Meyvələr',
@@ -223,12 +223,12 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         products: {
             title: 'Наша продукция',
             subtitle: 'Свежие и качественные фрукты',
-            viewDetails: 'Подробнее',
-            allProducts: 'Вся продукция',
+            viewDetails: 'Перейти к сортам',
+            allProducts: 'Подробнее',
             items: [
                 {
                     name: 'Яблоко',
-                    description: 'Красное, сочное и витаминное яблоко из Губы. Отличается своим вкусом.'
+                    description: 'Сочные и витаминные яблоки. Отличаются своим вкусом.'
                 },
                 {
                     name: 'Нектарин',
@@ -240,7 +240,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                 },
                 {
                     name: 'Черешня',
-                    description: 'Темно-красные, крупные и вкусные сорта черешни.'
+                    description: 'Крупные и вкусные сорта черешни.'
                 }
             ],
             qualityTitle: 'Качественные фрукты',
@@ -368,12 +368,12 @@ Quality, reliability, and sustainable development are our core values. Thanks to
         products: {
             title: 'Our Products',
             subtitle: 'Fresh and quality fruits',
-            viewDetails: 'View Details',
-            allProducts: 'All Products',
+            viewDetails: 'Go to varieties',
+            allProducts: 'View Details',
             items: [
                 {
                     name: 'Apple',
-                    description: 'Red, juicy, and vitamin-rich Guba apple. Distinguished by its taste.'
+                    description: 'Juicy and vitamin-rich apples. Distinguished by their taste.'
                 },
                 {
                     name: 'Nectarine',
@@ -385,7 +385,7 @@ Quality, reliability, and sustainable development are our core values. Thanks to
                 },
                 {
                     name: 'Cherry',
-                    description: 'Dark red, large, and tasty cherry varieties.'
+                    description: 'Large and tasty cherry varieties.'
                 }
             ],
             qualityTitle: 'Quality Fruits',

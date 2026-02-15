@@ -334,6 +334,47 @@ img {
   line-height: 1.5;
 }
 
+/* Mobile Product Button — phone only, glassmorphism over image */
+.mobile-product-overlay {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-product-overlay {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    padding-bottom: 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .mobile-product-btn {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: var(--radius-full);
+    padding: 6px 16px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background var(--duration-normal) var(--easing-smooth);
+  }
+
+  .mobile-product-btn:active {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+
 /* Swiper Custom Styles */
 .swiper-button-next,
 .swiper-button-prev {

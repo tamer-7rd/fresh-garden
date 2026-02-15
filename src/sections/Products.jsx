@@ -84,7 +84,8 @@ const Products = () => {
                                             <div className="absolute bottom-4 left-0 right-0 text-center text-white p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                                 <button
                                                     onClick={(e) => openModal(index, product.name, e)}
-                                                    className="inline-block px-4 py-1.5 border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold hover:bg-white/30 transition-colors cursor-pointer"
+                                                    className="inline-block border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-base font-semibold hover:bg-white/30 transition-colors cursor-pointer whitespace-nowrap"
+                                                    style={{ padding: '6px 16px' }}
                                                 >
                                                     {t.products.viewDetails}
                                                 </button>

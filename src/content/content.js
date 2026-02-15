@@ -121,7 +121,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             {
                 name: 'Alma',
                 image: appleImg,
-                description: 'Qırmızı, şirəli və vitaminli Quba alması. Dadı ilə fərqlənir.'
+                description: 'Şirəli və vitaminli almalarımız. Dadı ilə fərqlənir.'
             },
             {
                 name: 'Nektarin',
@@ -136,7 +136,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             {
                 name: 'Gilas',
                 image: gilasImg,
-                description: 'Tünd qırmızı, iri və dadlı gilas növlərimiz.'
+                description: 'İri və dadlı gilas növlərimiz.'
             }
         ]
     },
@@ -154,8 +154,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
     // Contact
     contact: {
         title: 'Əlaqə',
-        phone: '+994 55 660 10 50',
-        email: 'freshgardenquba.mmc@gmail.com',
+        phone: '+994 10 712 10 25',
+        email: 'info@freshgardenquba.az',
         address: 'Qusar rayonu, Caqar kəndi, Azərbaycan',
 
     }
