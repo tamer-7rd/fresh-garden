@@ -221,7 +221,7 @@ img {
 
 /* Navigation Styles */
 .nav-link {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2px;
   color: var(--color-text);
@@ -613,16 +613,16 @@ img {
 }
 
 .header-logo-img {
-  height: 95px;
+  height: 80px;
   width: auto;
-  max-height: 95px;
+  max-height: 80px;
   object-fit: contain;
 }
 
 @media (min-width: 1400px) {
   .header-logo-img {
-    height: 95px !important;
-    max-height: 95px !important;
+    height: 85px !important;
+    max-height: 85px !important;
   }
 }
 
@@ -642,8 +642,8 @@ img {
 
 @media (min-width: 1200px) {
   .header-brand-title {
-    font-size: 2.5rem; /* Between 2rem and 3rem */
-    margin-right: 33px;
+    font-size: 2rem;
+    margin-right: 24px;
     margin-left: 0;
     white-space: nowrap;
     max-width: none;
@@ -657,7 +657,7 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 @media (max-width: 1199px) {
@@ -792,6 +792,122 @@ img {
 
 .mobile-nav-link:not(.active):hover {
   background-color: #f9fafb; /* gray-50 */
+}
+
+/* ===== Services Dropdown (Desktop) ===== */
+.services-dropdown-container {
+  position: relative;
+}
+
+.services-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.services-chevron {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.services-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.services-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0f0f0;
+  padding: 6px 0;
+  z-index: 60;
+}
+
+.services-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all 0.15s ease;
+}
+
+.services-dropdown-item:hover {
+  background-color: #f0fdf4;
+  color: var(--color-primary);
+}
+
+/* ===== Services Accordion (Mobile) ===== */
+.mobile-services-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-services-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+}
+
+.mobile-services-chevron {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mobile-services-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+.mobile-services-submenu {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.mobile-services-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.mobile-services-item:hover {
+  background-color: #f0fdf4;
+  color: var(--color-primary);
 }
 
 .mobile-contact-btn {

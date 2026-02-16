@@ -6,7 +6,8 @@ export const translations = {
         navigation: [
             { name: 'Ana səhifə', path: '/' },
             { name: 'Haqqımızda', path: '/haqqimizda' },
-            { name: 'Məhsullarımız', path: '/mehsullarimiz' }
+            { name: 'Məhsullarımız', path: '/mehsullarimiz' },
+            { name: 'Xidmətlərimiz', hasDropdown: true }
         ],
 
         // Common buttons
@@ -138,6 +139,16 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             footerNav: 'Footer naviqasiya'
         },
 
+        // Services
+        services: {
+            dropdownItems: [
+                { name: 'Soyuducu', id: 'soyuducu' },
+                { name: 'Ambar', id: 'ambar' },
+                { name: 'Çeşidləmə', id: 'cesidleme' }
+            ],
+            comingSoon: 'Tezliklə — hazırlanır'
+        },
+
         // Modal
         modal: {
             varietiesTitle: 'Çeşid',
@@ -152,7 +163,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         navigation: [
             { name: 'Главная', path: '/' },
             { name: 'О нас', path: '/haqqimizda' },
-            { name: 'Продукция', path: '/mehsullarimiz' }
+            { name: 'Продукция', path: '/mehsullarimiz' },
+            { name: 'Услуги', hasDropdown: true }
         ],
 
         // Common buttons
@@ -283,6 +295,16 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             footerNav: 'Навигация футера'
         },
 
+        // Services
+        services: {
+            dropdownItems: [
+                { name: 'Холодильник', id: 'soyuducu' },
+                { name: 'Склад', id: 'ambar' },
+                { name: 'Сортировка', id: 'cesidleme' }
+            ],
+            comingSoon: 'Скоро — готовится'
+        },
+
         // Modal
         modal: {
             varietiesTitle: 'Сорта',
@@ -297,7 +319,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         navigation: [
             { name: 'Home', path: '/' },
             { name: 'About Us', path: '/haqqimizda' },
-            { name: 'Products', path: '/mehsullarimiz' }
+            { name: 'Products', path: '/mehsullarimiz' },
+            { name: 'Services', hasDropdown: true }
         ],
 
         // Common buttons
@@ -426,6 +449,16 @@ Quality, reliability, and sustainable development are our core values. Thanks to
         header: {
             mainNav: 'Main navigation',
             footerNav: 'Footer navigation'
+        },
+
+        // Services
+        services: {
+            dropdownItems: [
+                { name: 'Cold Storage', id: 'soyuducu' },
+                { name: 'Warehouse', id: 'ambar' },
+                { name: 'Sorting', id: 'cesidleme' }
+            ],
+            comingSoon: 'Coming soon'
         },
 
         // Modal

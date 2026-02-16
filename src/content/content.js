@@ -57,7 +57,8 @@ export const content = {
     navigation: [
         { name: 'Ana səhifə', path: '/' },
         { name: 'Haqqımızda', path: '/haqqimizda' },
-        { name: 'Məhsullarımız', path: '/mehsullarimiz' }
+        { name: 'Məhsullarımız', path: '/mehsullarimiz' },
+        { name: 'Xidmətlərimiz', hasDropdown: true }
     ],
 
     // Hero section
