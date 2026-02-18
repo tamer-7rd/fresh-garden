@@ -130,7 +130,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             sections: 'Bölmələr',
             contact: 'Əlaqə',
             tagline: 'Təbiətin saflığını, torpağın bərəkətini və zəhmətimizin dəyərini birləşdirən yerli meyvə istehsalçısı.',
-            copyright: 'Bütün hüquqlar qorunur.'
+            copyright: 'Bütün hüquqlar qorunur.',
+            madeBy: 'Dizayn və hazırlanıb'
         },
 
         // Header
@@ -294,7 +295,8 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             sections: 'Разделы',
             contact: 'Контакты',
             tagline: 'Местный производитель фруктов, объединяющий чистоту природы, плодородие земли и ценность нашего труда.',
-            copyright: 'Все права защищены.'
+            copyright: 'Все права защищены.',
+            madeBy: 'Дизайн и разработка'
         },
 
         // Header
@@ -458,7 +460,8 @@ Quality, reliability, and sustainable development are our core values. Thanks to
             sections: 'Sections',
             contact: 'Contact',
             tagline: 'A local fruit producer that combines the purity of nature, the fertility of the land, and the value of our labor.',
-            copyright: 'All rights reserved.'
+            copyright: 'All rights reserved.',
+            madeBy: 'Designed & built by'
         },
 
         // Header

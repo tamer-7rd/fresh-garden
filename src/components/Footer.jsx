@@ -87,9 +87,12 @@ const Footer = () => {
                     <span className="text-center md:text-left">
                         © {new Date().getFullYear()} {content.company.name}. {t.footer.copyright}
                     </span>
-                    <span className="text-gray-400 text-xs md:text-sm">
-                        Made by <span className="text-[var(--color-primary)] font-semibold">T&T Lab</span>
-                    </span>
+                    <a
+                        href="tel:+994508747905"
+                        className="text-gray-400 text-xs md:text-sm hover:text-white transition-colors"
+                    >
+                        {t.footer.madeBy} <span className="text-[var(--color-primary)] font-semibold">22 Lab</span>
+                    </a>
                 </div>
             </div>
         </footer>

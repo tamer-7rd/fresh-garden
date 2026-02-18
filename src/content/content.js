@@ -28,6 +28,12 @@ import gallery15 from '../assets/images/IMG_8140.JPG';
 import gallery16 from '../assets/images/IMG_8128.JPG'; // Replaced missing 8141 with duplicate
 import gallery17 from '../assets/images/IMG_8142.JPG';
 import gallery18 from '../assets/images/IMG_8129.JPG'; // Replaced missing 8143 with duplicate
+import almalar1 from '../assets/images/almalar1.jpeg';
+import almalar2 from '../assets/images/almalar2.jpeg';
+import almalar3 from '../assets/images/almalar3.jpeg';
+import almalar4 from '../assets/images/almalar4.jpeg';
+import almalar5 from '../assets/images/almalar5.jpeg';
+import almalar6 from '../assets/images/almalar6.jpeg';
 
 // Video - YouTube
 // Video URL is stored directly in content object
@@ -146,9 +152,10 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
     gallery: {
         title: 'Qalereya',
         images: [
-            gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
-            gallery7, gallery8, gallery9, gallery10, gallery11, gallery12,
-            gallery13, gallery14, gallery15, gallery16, gallery17, gallery18
+            almalar1, gallery3, gallery8, almalar4, gallery1, gallery11,
+            almalar2, gallery6, gallery14, almalar5, gallery2, gallery9,
+            almalar3, gallery7, gallery15, almalar6, gallery4, gallery12,
+            gallery5, gallery10, gallery13, gallery16, gallery17, gallery18
         ]
     },
 

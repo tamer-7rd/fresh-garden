@@ -79,7 +79,7 @@ const Header = () => {
         productsData.forEach((product, productIndex) => {
             const productName = t.products.items[productIndex]?.name || product.title;
             const productNameLower = productName.toLowerCase();
-            
+
             // Check if product name matches
             if (productNameLower.includes(query)) {
                 results.push({
@@ -119,7 +119,7 @@ const Header = () => {
 
         if (e.key === 'ArrowDown') {
             e.preventDefault();
-            setSelectedResultIndex(prev => 
+            setSelectedResultIndex(prev =>
                 prev < searchResults.length - 1 ? prev + 1 : prev
             );
         } else if (e.key === 'ArrowUp') {
@@ -407,8 +407,8 @@ const Header = () => {
                                                             onMouseEnter={() => setSelectedResultIndex(index)}
                                                         >
                                                             <div className="search-result-image">
-                                                                <img 
-                                                                    src={result.image || result.productImage} 
+                                                                <img
+                                                                    src={result.image || result.productImage}
                                                                     alt={result.varietyName || result.productName}
                                                                     onError={(e) => {
                                                                         e.target.src = result.productImage;
