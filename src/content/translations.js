@@ -142,11 +142,10 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         // Services
         services: {
             dropdownItems: [
-                { name: 'Soyuducu', id: 'soyuducu' },
-                { name: 'Ambar', id: 'ambar' },
+                { name: 'Soyuducu ambar', id: 'soyuducu-ambar' },
                 { name: 'Çeşidləmə', id: 'cesidleme' }
             ],
-            comingSoon: 'Tezliklə — hazırlanır'
+            comingSoon: 'İşlənmə mərhələsindədir'
         },
 
         // Modal
@@ -155,6 +154,15 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             noData: 'Məlumat yoxdur',
             close: 'Bağla',
             returnToList: 'Sortlara qayıt'
+        },
+
+        // Varieties page
+        varietiesPage: {
+            backButton: '← Məhsullara qayıt',
+            subtitle: 'Çeşidlər',
+            searchPlaceholder: 'Sort axtar...',
+            notFound: 'Məhsul tapılmadı',
+            noResults: 'Nəticə tapılmadı'
         }
     },
 
@@ -298,11 +306,10 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
         // Services
         services: {
             dropdownItems: [
-                { name: 'Холодильник', id: 'soyuducu' },
-                { name: 'Склад', id: 'ambar' },
+                { name: 'Холодильный склад', id: 'soyuducu-ambar' },
                 { name: 'Сортировка', id: 'cesidleme' }
             ],
-            comingSoon: 'Скоро — готовится'
+            comingSoon: 'В стадии разработки'
         },
 
         // Modal
@@ -311,6 +318,15 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
             noData: 'Нет данных',
             close: 'Закрыть',
             returnToList: 'Вернуться к списку сортов'
+        },
+
+        // Varieties page
+        varietiesPage: {
+            backButton: '← Назад к продуктам',
+            subtitle: 'Сорта',
+            searchPlaceholder: 'Поиск сорта...',
+            notFound: 'Продукт не найден',
+            noResults: 'Результатов не найдено'
         }
     },
 
@@ -454,11 +470,10 @@ Quality, reliability, and sustainable development are our core values. Thanks to
         // Services
         services: {
             dropdownItems: [
-                { name: 'Cold Storage', id: 'soyuducu' },
-                { name: 'Warehouse', id: 'ambar' },
+                { name: 'Cold Storage', id: 'soyuducu-ambar' },
                 { name: 'Sorting', id: 'cesidleme' }
             ],
-            comingSoon: 'Coming soon'
+            comingSoon: 'In development stage'
         },
 
         // Modal
@@ -467,6 +482,15 @@ Quality, reliability, and sustainable development are our core values. Thanks to
             noData: 'No data available',
             close: 'Close',
             returnToList: 'Return to varieties'
+        },
+
+        // Varieties page
+        varietiesPage: {
+            backButton: '← Back to products',
+            subtitle: 'Varieties',
+            searchPlaceholder: 'Search variety...',
+            notFound: 'Product not found',
+            noResults: 'No results found'
         }
     }
 };

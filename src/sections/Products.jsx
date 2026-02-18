@@ -1,30 +1,24 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import OptimizedImage from '../components/OptimizedImage';
-import FruitModal from '../components/FruitModal';
 import { content } from '../content/content';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../content/translations';
+import { getSlugByIndex } from '../data/productsData';
 
 const Products = () => {
     const { language } = useLanguage();
     const t = translations[language];
+    const navigate = useNavigate();
 
-    // Modal state
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedFruit, setSelectedFruit] = useState({ index: 0, name: '' });
-
-    const openModal = (index, name, e) => {
+    const handleProductClick = (index, e) => {
         e.preventDefault();
         e.stopPropagation();
-        setSelectedFruit({ index, name });
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
+        const slug = getSlugByIndex(index);
+        if (slug) {
+            navigate(`/mehsullarimiz/${slug}`);
+        }
     };
 
     const containerVariants = {
@@ -70,7 +64,7 @@ const Products = () => {
                             whileHover={{ y: -10 }}
                             className="group h-full"
                         >
-                            <Link to="/mehsullarimiz" className="block h-full">
+                            <Link to={`/mehsullarimiz/${getSlugByIndex(index)}`} className="block h-full">
                                 <div className="product-card h-full flex flex-col">
                                     <div className="relative overflow-hidden shrink-0">
                                         <OptimizedImage
@@ -82,13 +76,12 @@ const Products = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                             <div className="absolute bottom-4 left-0 right-0 text-center text-white p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                                <button
-                                                    onClick={(e) => openModal(index, product.name, e)}
-                                                    className="inline-block border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-base font-semibold hover:bg-white/30 transition-colors cursor-pointer whitespace-nowrap"
+                                                <span
+                                                    className="inline-block border border-white/40 bg-white/20 backdrop-blur-sm rounded-full text-base font-semibold hover:bg-white/30 transition-colors whitespace-nowrap"
                                                     style={{ padding: '6px 16px' }}
                                                 >
                                                     {t.products.viewDetails}
-                                                </button>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -129,14 +122,6 @@ const Products = () => {
                     </Link>
                 </motion.div>
             </div>
-
-            {/* Fruit Modal */}
-            <FruitModal
-                isOpen={isModalOpen}
-                onClose={closeModal}
-                fruitIndex={selectedFruit.index}
-                fruitName={selectedFruit.name}
-            />
         </section>
     );
 };

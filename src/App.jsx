@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
+import ProductVarietiesPage from './pages/ProductVarietiesPage';
 import { seoData } from './content/seoData';
 import './index.css';
 
@@ -32,6 +33,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/haqqimizda" element={<AboutPage />} />
               <Route path="/mehsullarimiz" element={<ProductsPage />} />
+              <Route path="/mehsullarimiz/:productSlug" element={<ProductVarietiesPage />} />
             </Routes>
           </div>
           <Footer />

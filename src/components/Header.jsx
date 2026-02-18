@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { content } from '../content/content';
 import { useLanguage, languages } from '../context/LanguageContext';
 import { translations } from '../content/translations';
+import { productsData } from '../data/productsData';
 import logoImage from '../assets/images/logo.png';
 
 const Header = () => {
@@ -13,10 +14,15 @@ const Header = () => {
     const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
     const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [selectedResultIndex, setSelectedResultIndex] = useState(-1);
     const location = useLocation();
+    const navigate = useNavigate();
     const { language, changeLanguage } = useLanguage();
     const langDropdownRef = useRef(null);
     const servicesDropdownRef = useRef(null);
+    const searchRef = useRef(null);
 
     // Get translations for current language
     const t = translations[language];
@@ -36,6 +42,9 @@ const Header = () => {
         setIsLangDropdownOpen(false);
         setIsServicesDropdownOpen(false);
         setIsMobileServicesOpen(false);
+        setSearchQuery('');
+        setSearchResults([]);
+        setSelectedResultIndex(-1);
     }, [location]);
 
     // Close dropdown when clicking outside
@@ -47,11 +56,92 @@ const Header = () => {
             if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
                 setIsServicesDropdownOpen(false);
             }
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setIsSearchOpen(false);
+            }
         };
 
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
+
+    // Search functionality
+    useEffect(() => {
+        if (!searchQuery.trim()) {
+            setSearchResults([]);
+            return;
+        }
+
+        const query = searchQuery.toLowerCase().trim();
+        const results = [];
+
+        // Search through products and their varieties
+        productsData.forEach((product, productIndex) => {
+            const productName = t.products.items[productIndex]?.name || product.title;
+            const productNameLower = productName.toLowerCase();
+            
+            // Check if product name matches
+            if (productNameLower.includes(query)) {
+                results.push({
+                    type: 'product',
+                    productIndex,
+                    productSlug: product.slug,
+                    productName,
+                    image: product.image,
+                    description: t.products.items[productIndex]?.description || ''
+                });
+            }
+
+            // Search through varieties of this product
+            product.varieties.forEach((variety) => {
+                const varietyNameLower = variety.name.toLowerCase();
+                if (varietyNameLower.includes(query)) {
+                    results.push({
+                        type: 'variety',
+                        productIndex,
+                        productSlug: product.slug,
+                        productName,
+                        varietyName: variety.name,
+                        image: variety.imageSrc,
+                        productImage: product.image
+                    });
+                }
+            });
+        });
+
+        setSearchResults(results.slice(0, 8)); // Limit to 8 results
+        setSelectedResultIndex(-1); // Reset selection when results change
+    }, [searchQuery, language, t]);
+
+    // Handle keyboard navigation in search
+    const handleSearchKeyDown = (e) => {
+        if (!searchResults.length) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setSelectedResultIndex(prev => 
+                prev < searchResults.length - 1 ? prev + 1 : prev
+            );
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setSelectedResultIndex(prev => prev > 0 ? prev - 1 : -1);
+        } else if (e.key === 'Enter' && selectedResultIndex >= 0) {
+            e.preventDefault();
+            const result = searchResults[selectedResultIndex];
+            navigate(`/mehsullarimiz/${result.productSlug}`);
+            setIsSearchOpen(false);
+            setSearchQuery('');
+        } else if (e.key === 'Escape') {
+            setIsSearchOpen(false);
+            setSearchQuery('');
+        }
+    };
+
+    const handleResultClick = (result) => {
+        navigate(`/mehsullarimiz/${result.productSlug}`);
+        setIsSearchOpen(false);
+        setSearchQuery('');
+    };
 
     // Desktop language dropdown button
     const LanguageDropdown = () => (
@@ -274,6 +364,7 @@ const Header = () => {
                 <AnimatePresence>
                     {isSearchOpen && (
                         <motion.div
+                            ref={searchRef}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
@@ -286,6 +377,9 @@ const Header = () => {
                                         placeholder={t.buttons.searchPlaceholder}
                                         className="search-input"
                                         autoFocus
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        onKeyDown={handleSearchKeyDown}
                                     />
                                     <button className="search-icon-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -293,6 +387,87 @@ const Header = () => {
                                         </svg>
                                     </button>
                                 </div>
+
+                                {/* Search Results */}
+                                {searchQuery.trim() && (
+                                    <div className="search-results">
+                                        {searchResults.length > 0 ? (
+                                            <>
+                                                <div className="search-results-header">
+                                                    {language === 'az' && `${searchResults.length} nəticə tapıldı`}
+                                                    {language === 'ru' && `Найдено ${searchResults.length} результатов`}
+                                                    {language === 'en' && `Found ${searchResults.length} results`}
+                                                </div>
+                                                <div className="search-results-list">
+                                                    {searchResults.map((result, index) => (
+                                                        <div
+                                                            key={`${result.type}-${result.productIndex}-${result.varietyName || ''}-${index}`}
+                                                            className={`search-result-item ${selectedResultIndex === index ? 'selected' : ''}`}
+                                                            onClick={() => handleResultClick(result)}
+                                                            onMouseEnter={() => setSelectedResultIndex(index)}
+                                                        >
+                                                            <div className="search-result-image">
+                                                                <img 
+                                                                    src={result.image || result.productImage} 
+                                                                    alt={result.varietyName || result.productName}
+                                                                    onError={(e) => {
+                                                                        e.target.src = result.productImage;
+                                                                    }}
+                                                                />
+                                                            </div>
+                                                            <div className="search-result-content">
+                                                                <div className="search-result-type">
+                                                                    {result.type === 'product' ? (
+                                                                        <span className="search-badge search-badge-product">
+                                                                            {language === 'az' && 'Məhsul'}
+                                                                            {language === 'ru' && 'Продукт'}
+                                                                            {language === 'en' && 'Product'}
+                                                                        </span>
+                                                                    ) : (
+                                                                        <span className="search-badge search-badge-variety">
+                                                                            {language === 'az' && 'Çeşid'}
+                                                                            {language === 'ru' && 'Сорт'}
+                                                                            {language === 'en' && 'Variety'}
+                                                                        </span>
+                                                                    )}
+                                                                </div>
+                                                                <div className="search-result-title">
+                                                                    {result.varietyName || result.productName}
+                                                                </div>
+                                                                {result.type === 'variety' && (
+                                                                    <div className="search-result-subtitle">
+                                                                        {result.productName}
+                                                                    </div>
+                                                                )}
+                                                                {result.type === 'product' && result.description && (
+                                                                    <div className="search-result-description">
+                                                                        {result.description}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                            <div className="search-result-arrow">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <div className="search-no-results">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                                </svg>
+                                                <p>
+                                                    {language === 'az' && 'Heç bir nəticə tapılmadı'}
+                                                    {language === 'ru' && 'Ничего не найдено'}
+                                                    {language === 'en' && 'No results found'}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     )}

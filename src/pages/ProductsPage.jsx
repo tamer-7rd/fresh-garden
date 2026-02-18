@@ -1,27 +1,22 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { content } from '../content/content';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../content/translations';
 import OptimizedImage from '../components/OptimizedImage';
-import FruitModal from '../components/FruitModal';
 import SEO from '../components/SEO';
+import { getSlugByIndex } from '../data/productsData';
 
 const ProductsPage = () => {
     const { language } = useLanguage();
     const t = translations[language];
+    const navigate = useNavigate();
 
-    // Modal state
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedFruit, setSelectedFruit] = useState({ index: 0, name: '' });
-
-    const openModal = (index, name) => {
-        setSelectedFruit({ index, name });
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
+    const handleProductClick = (index) => {
+        const slug = getSlugByIndex(index);
+        if (slug) {
+            navigate(`/mehsullarimiz/${slug}`);
+        }
     };
 
     const containerVariants = {
@@ -84,13 +79,13 @@ const ProductsPage = () => {
                                     variants={itemVariants}
                                     whileHover={{ y: -10 }}
                                     className="group h-full cursor-pointer"
-                                    onClick={() => openModal(index, product.name)}
+                                    onClick={() => handleProductClick(index)}
                                     role="button"
                                     tabIndex={0}
                                     onKeyDown={(e) => {
                                         if (e.key === 'Enter' || e.key === ' ') {
                                             e.preventDefault();
-                                            openModal(index, product.name);
+                                            handleProductClick(index);
                                         }
                                     }}
                                     aria-label={`${product.name} - ${t.products.viewDetails}`}
@@ -114,7 +109,7 @@ const ProductsPage = () => {
                                                     className="mobile-product-btn"
                                                     onClick={(e) => {
                                                         e.stopPropagation();
-                                                        openModal(index, product.name);
+                                                        handleProductClick(index);
                                                     }}
                                                 >
                                                     {t.products.viewDetails}
@@ -178,17 +173,8 @@ const ProductsPage = () => {
                     </div>
                 </section>
             </main>
-
-            {/* Fruit Modal */}
-            <FruitModal
-                isOpen={isModalOpen}
-                onClose={closeModal}
-                fruitIndex={selectedFruit.index}
-                fruitName={selectedFruit.name}
-            />
         </>
     );
 };
 
 export default ProductsPage;
-
