@@ -83,7 +83,7 @@ export const content = {
             },
             {
                 image: heroImg3,
-                title: 'Keyfiyyətli Xidmətlər',
+                title: 'Peşəkar Xidmətlər',
                 subtitle: 'Məhsulların saxlanması və çeşidlənməsi üçün peşəkar xidmətlər təqdim edirik.'
             }
         ]

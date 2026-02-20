@@ -32,7 +32,7 @@ export const translations = {
                     subtitle: 'Müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim edirik'
                 },
                 {
-                    title: 'Keyfiyyətli Xidmətlər',
+                    title: 'Peşəkar Xidmətlər',
                     subtitle: 'Məhsulların saxlanması və çeşidlənməsi üçün peşəkar xidmətlər təqdim edirik.'
                 }
             ]
@@ -202,7 +202,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                     subtitle: 'Мы предлагаем нашим клиентам качественные, натуральные и полезные фрукты'
                 },
                 {
-                    title: 'Качественные Услуги',
+                    title: 'Профессиональные Услуги',
                     subtitle: 'Мы предоставляем профессиональные услуги по хранению и сортировке продукции.'
                 }
             ]
@@ -371,7 +371,7 @@ Keyfiyyət, etibarlılıq və davamlı inkişaf prinsipləri bizim əsas dəyər
                     subtitle: 'We offer our customers quality, natural, and healthy fruits'
                 },
                 {
-                    title: 'Quality Services',
+                    title: 'Professional Services',
                     subtitle: 'We provide professional services for product storage and sorting.'
                 }
             ]
