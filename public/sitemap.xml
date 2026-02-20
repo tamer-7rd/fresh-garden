@@ -4,7 +4,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://freshgardenquba.az/</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -12,7 +12,7 @@
     <!-- About Page -->
     <url>
         <loc>https://freshgardenquba.az/haqqimizda</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -20,7 +20,7 @@
     <!-- Products Page -->
     <url>
         <loc>https://freshgardenquba.az/mehsullarimiz</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -28,7 +28,7 @@
     <!-- Product Varieties: Alma -->
     <url>
         <loc>https://freshgardenquba.az/mehsullarimiz/alma</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -36,7 +36,7 @@
     <!-- Product Varieties: Nektarin -->
     <url>
         <loc>https://freshgardenquba.az/mehsullarimiz/nektarin</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -44,7 +44,7 @@
     <!-- Product Varieties: Yastı Şaftalı -->
     <url>
         <loc>https://freshgardenquba.az/mehsullarimiz/yastishaftali</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -52,7 +52,7 @@
     <!-- Product Varieties: Gilas -->
     <url>
         <loc>https://freshgardenquba.az/mehsullarimiz/gilas</loc>
-        <lastmod>2026-02-18</lastmod>
+        <lastmod>2026-02-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

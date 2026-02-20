@@ -4,6 +4,7 @@
 // Hero slider images
 import heroImg1 from '../assets/images/IMG_8118.JPG';
 import heroImg2 from '../assets/images/IMG_8129.JPG';
+import heroImg3 from '../assets/images/xidmetler_hero.jpeg';
 
 // About/Mission images
 import aboutImg from '../assets/images/IMG_8120.JPG';
@@ -79,6 +80,11 @@ export const content = {
                 image: heroImg2,
                 title: 'Keyfiyyətli Meyvələr',
                 subtitle: 'Müştərilərimizə keyfiyyətli, təbii və sağlam meyvələr təqdim edirik'
+            },
+            {
+                image: heroImg3,
+                title: 'Keyfiyyətli Xidmətlər',
+                subtitle: 'Məhsulların saxlanması və çeşidlənməsi üçün peşəkar xidmətlər təqdim edirik.'
             }
         ]
     },
