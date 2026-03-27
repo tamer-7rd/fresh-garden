@@ -88,7 +88,9 @@ const Footer = () => {
                         © {new Date().getFullYear()} {content.company.name}. {t.footer.copyright}
                     </span>
                     <a
-                        href="tel:+994508747905"
+                        href="https://22-lab.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-400 text-xs md:text-sm hover:text-white transition-colors"
                     >
                         {t.footer.madeBy} <span className="text-[var(--color-primary)] font-semibold">22 Lab</span>
